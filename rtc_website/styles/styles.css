@@ -1,0 +1,475 @@
+/* 
+* Temporary Suggestion Box:
+* ADD Browser Fallbacks
+* N.B.: "***" -- CHANGE ASAP
+* N.B.1: "****" -- MEDIA RULES NEEDED
+* N.B.2: "!!" -- DON'T REMOVE THIS COMMENT.
+* Use shorthands, wherever applicable.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    font: 10px Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+    --logo-width: 10rem;
+
+    --intro-ttl-font-size: 8rem;
+    --intro-ttl-col: rgb(233, 224, 207);
+
+    --nav-link-font-size: 2.2rem;
+    --nav-link-col: yellow;
+    --nav-link-margin: 2vw;
+
+    --down-arrow-size: 4rem;
+    --down-arrow-color: white; 
+
+    --whitespan-text-font-size: 8rem;
+    --whitespan-text-col: cyan;
+
+    --about-desc-font-size: 2.5rem;
+
+    --project-width: 10rem;
+    --project-height: 8rem;
+
+    --proj-ttl-col: white;
+    --proj-ttl-font-size: 4rem;
+
+    --proj-img-width: 25rem; /* 4:3 Aspect Ratio */
+    --proj-img-height: 30rem;
+
+    --proj-desc-col: white;
+    --proj-desc-font-size: 2rem;
+
+    --person-name-font-size: 2.25rem;
+    --person-width: 32em;
+    --person-height: 40rem;
+
+    --footer-text-col: rgb(254, 200, 193);
+    --footer-bg-col: rgb(194, 171, 95);
+
+    --fb-col: #3b5998;
+    --insta-col: #fb3958;
+    --github-col: rgb(23, 21, 21);
+}
+
+body
+{
+    background: white center/cover no-repeat fixed;
+}
+
+/* .parallax-mirror {
+    width: 100vw !important;
+    left: -50% !important;
+    right: 50% !important;
+}
+
+.parallax-mirror img {
+    width: 100vw !important;
+} */
+
+a:hover, a:link, a:active, a:any-link, a:visited
+{
+    text-decoration: none !important;
+}
+
+.fb, .insta, .github {
+    color: white;
+
+    transition: 0.5s ease;
+}
+
+.fb:hover
+{
+    opacity: 1;
+    color: var(--fb-col);
+}
+
+.insta:hover
+{
+    opacity: 1;
+    color: var(--insta-col);
+}
+
+.github:hover
+{
+    opacity: 1;
+    color: rgb(23, 21, 21);
+}
+
+/* For all the tiles -- Individual tiles can be styled, well, individually */
+.tiles
+{
+    height: 100vh;
+    text-align: center;
+
+    /* backdrop-filter: blur(10px); */
+}
+
+/* All the white spans */
+.whitespan {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 9rem;
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Russo One'; /* Inconsolata */
+    text-align: center;
+
+    background: rgb(241, 239, 209);
+
+    padding: 2rem 0;
+}
+
+/* LOGO Image */
+#logo-link
+{
+    margin-left: 6vw;
+    float: left;
+}
+
+#logo
+{
+    width: var(--logo-width);
+
+    transition: 0.3s ease;
+}
+
+#logo:hover
+{
+    transform: scale(1.2);
+}
+
+#nav
+{
+    position: sticky;
+    top: 0;
+
+    padding: 2rem;
+
+    background: inherit;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+#nav.scrolled {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(1rem);
+}
+
+#nav-list {
+    list-style-type: none;
+}
+
+.nav-links
+{
+    display: block;
+    float: left;
+
+    position: relative;
+    left: 18%;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--nav-link-font-size);
+    color: var(--nav-link-col);
+
+    margin: var(--nav-link-margin);
+
+    text-align: center;
+}
+
+/* Clearing floats */
+#nav:before,
+#nav:after {
+  content: "";
+  display: table;
+}
+
+#nav:after {
+  clear: both;
+}
+
+#nav {
+  clear: both;
+  *zoom: 1;
+}
+
+/* HOME */
+/* THE TITLE */
+#ttl
+{ 
+    position: relative;
+    top: 30%;
+
+    z-index: 0;
+
+    color: var(--intro-ttl-col);
+    font-family: Aleo;
+    font-size: var(--intro-ttl-font-size);
+    font-weight: 500;
+}
+
+.down-arrow {
+    display: block;
+    position: relative;
+    top: 71%;
+    color: var(--down-arrow-color);
+    /* left: -24.7%; */
+
+    font-size: var(--down-arrow-size);
+}
+
+.down-arrow a {
+    color: orangered !important;
+}
+
+/* THE FOOTER */
+footer
+{
+    display: block;
+
+    width: 100%;
+
+    padding: 2rem;
+
+    background-color: var(--footer-bg-col);
+
+    color: var(--footer-text-col);
+    font: italic bold 1.5rem 'Segoe UI', cursive;
+    text-align: center;
+}
+
+#selfref
+{
+    color: white !important;
+    border-bottom: 1.5px dotted rgb(5, 153, 138);
+}
+
+/* ABOUT */
+#about {
+    padding: 5vw 6vw;
+    padding-top: 10vw;
+}
+
+.about-desc {
+    padding: 5vw;
+
+    font-size: var(--about-desc-font-size);
+
+    background: rgba(41, 118, 148, 0.75); /* VAR */
+
+    backdrop-filter: blur(1rem);
+
+    /* -webkit-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
+    /* -moz-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
+    box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    
+    height: 100%;
+}
+
+/* PROJECTS */
+#proj
+{
+    display: grid;
+
+    grid-template-columns: 6fr 6fr;
+    grid-column-gap: 2rem;
+
+    padding: 4rem;
+    height: auto;
+}
+
+.project {
+    width: auto;
+    height: auto;
+
+    padding: 3rem;
+    margin: 2rem;
+
+    background: rgba(41, 118, 148, 0.75); /* VAR */
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+
+    text-align: center;
+}
+
+.proj-ttl {
+    /* float: right; */
+    margin: 2rem;
+
+    color: var(--proj-ttl-col);
+    font-family: Aleo;
+    font-size: var(--proj-ttl-font-size);
+    font-weight: 500;
+}
+
+.proj-img {
+    float: left;
+    width: var(--proj-img-width);
+    height: var(--proj-img-height);
+
+    border: 0.2rem solid wheat;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.85);
+
+    margin:  1rem 3rem;
+}
+
+.proj-desc {
+    margin: 0 3rem;
+    height: 100%;
+
+    text-align: justify;
+
+    color: var(--proj-desc-col);
+    font-family: Aleo;
+    font-size: var(--proj-desc-font-size);
+    font-weight: 500;
+}
+
+/* THE TEAM */
+#team
+{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+
+    padding: 10rem;
+    padding-bottom: 2rem;
+
+    height: auto;
+}
+
+.person {
+    margin: 5rem;
+    overflow: hidden;
+    position: relative;
+
+    width: var(--person-width);
+    height: var(--person-height);
+
+    box-shadow: 0 0 2rem 0 rgba(0,0,0,0.85);
+}
+
+.person-pic
+{
+    float: left;
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+
+    border: 0.2rem solid white;
+}
+
+.overlay
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+
+    background-color: rgba(146, 212, 221, 0.75);
+    backdrop-filter: blur(0.8rem);
+
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+
+    transition: 0.5s ease;
+}
+
+.person:hover .overlay {
+    height: 30%;
+}
+
+.person-name
+{
+    margin: 1.25rem 0;
+
+    color: rgb(13, 113, 228);
+    
+	font-family: Aleo;
+	font-weight: 600;
+    font-size: var(--person-name-font-size);
+
+    border-radius: 5px;
+}
+
+.person-social-links {
+    margin: 2rem;
+}
+
+.person-details {
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+/* For Responsiveness: Media Rules */
+/* @media screen and (max-width: 1366px)
+{
+    
+}
+
+@media screen and (max-width: 960px)
+{
+    
+}
+
+@media screen and (max-width: 640px)
+{
+    :root
+    {
+        --mar: 0.5rem;
+    }
+    body
+    {
+        grid-column-gap: 0.2rem;
+        grid-row-gap: 0.8rem;
+    }
+    #ttl
+    {
+        font-size: 4.5rem;
+    }
+    #nav
+    {
+        width: 7rem;
+    }
+    .navicons
+    {
+        width: 4rem;
+        padding: 1rem 0.76rem;
+    }
+    .nav-links
+    {
+        font-size: 4rem;
+    }
+    .nav-links:hover .revealed
+    {
+        display: block;
+        margin-top: 0.5rem;
+        line-height: 3.8rem;
+    }
+}
+
+@media screen and (max-width: 360px)
+{
+    #logo
+    {
+        width: 8rem;
+    }
+    #ttl
+    {
+        font-size: 4rem;
+    }
+} */

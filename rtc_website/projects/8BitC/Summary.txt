@@ -1,0 +1,13 @@
+We plan to make a 8 bit computer on breadboard using only simple logic gates. Its main objective would be to understand computer logic at the very basic level and see how things work at the basic level itself. Its a big project but we would work gradually and make each module progressively and learn how information is processed electronically.
+            It will consist of various modules:
+Clock module: outputs PWM signal with variable clock frequency
+Registers: stores memory (64 bits)
+Arthimetic logic unit: used to carry out operations like addition and subtraction
+RAM: 16 bits
+Output register: stores output values
+
+
+For more information, check out: https://eater.net/8bit/
+
+
+IMAGE CITATION: https://eater.net/8bit/kits
