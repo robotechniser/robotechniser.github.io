@@ -48,12 +48,19 @@
     --proj-desc-font-size: 2rem;
 
     --person-name-font-size: 2.25rem;
-    --person-width: 32em;
+    --person-width: 32rem;
     --person-height: 40rem;
 
-    --footer-text-col: rgb(254, 200, 193);
+    --connect-club-ttl-font-size: 5rem;
+    --connect-logo-width: 12rem;
+    --connect-niser-logo-width: 16rem;
+
+    --footer-text-col: rgb(221, 203, 200);
     --footer-bg-col: rgb(194, 171, 95);
 
+    --mail-col: rgb(0, 114, 202);
+    --whatsapp-col: rgb(85, 240, 112) ;
+    --yt-col: rgb(255, 0, 0);
     --fb-col: #3b5998;
     --insta-col: #fb3958;
     --github-col: rgb(23, 21, 21);
@@ -79,10 +86,25 @@ a:hover, a:link, a:active, a:any-link, a:visited
     text-decoration: none !important;
 }
 
-.fb, .insta, .github {
+.mail, .whatsapp, .yt, .fb, .insta, .github {
     color: white;
 
     transition: 0.5s ease;
+}
+
+.mail:hover {
+    opacity: 1;
+    color: var(--mail-col);
+}
+
+.whatsapp:hover {
+    opacity: 1;
+    color: var(--whatsapp-col);
+}
+
+.yt:hover {
+    opacity: 1;
+    color: var(--yt-col);
 }
 
 .fb:hover
@@ -245,7 +267,8 @@ footer
     background-color: var(--footer-bg-col);
 
     color: var(--footer-text-col);
-    font: italic bold 1.5rem 'Segoe UI', cursive;
+    font: 1.75rem 'Segoe UI', cursive;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -258,7 +281,7 @@ footer
 /* ABOUT */
 #about {
     padding: 5vw 6vw;
-    padding-top: 10vw;
+    /* padding-top: 10vw; */
 }
 
 .about-desc {
@@ -342,8 +365,8 @@ footer
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
 
-    padding: 10rem;
-    padding-bottom: 2rem;
+    padding: 4rem;
+    padding-bottom: 6rem;
 
     height: auto;
 }
@@ -413,6 +436,69 @@ footer
 .person-details {
     font-size: 4rem;
     margin: 1rem;
+}
+
+#connect {
+    height: 85vh;
+    padding: 3vw;
+}
+    
+.connect-desc {
+    padding: 3vw;
+
+    font-size: var(--about-desc-font-size);
+
+    background: rgba(41, 118, 148, 0.75); /* VAR */
+
+    backdrop-filter: blur(1rem);
+
+    /* -webkit-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
+    /* -moz-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
+    box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    
+    height: 100%;
+}
+
+#connect-club-ttl {
+    color: var(--intro-ttl-col);
+    font-family: Aleo;
+    font-size: var(--connect-club-ttl-font-size);
+    font-weight: 500;
+}
+
+.connect-niser {
+    margin: 3rem;
+
+    font-size: 3rem;
+    font-family: Inconsolata;
+    text-align: center;
+}
+
+#connect-logo
+{
+    width: var(--connect-logo-width);
+
+    margin: 2rem 0;
+
+    transition: 0.3s ease;
+}
+
+#connect-logo:hover
+{
+    transform: scale(1.1);
+}
+
+#connect-niser-logo
+{
+    width: var(--connect-niser-logo-width);
+    margin: 1rem 0;
+
+    transition: 0.3s ease;
+}
+
+.club-details {
+    font-size: 7rem;
+    margin: 3rem;
 }
 
 /* For Responsiveness: Media Rules */
