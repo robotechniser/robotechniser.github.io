@@ -10,6 +10,8 @@
 * {
     margin: 0;
     padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -34,6 +36,7 @@
     --whitespan-text-col: cyan;
 
     --about-desc-font-size: 2.5rem;
+    --about-desc-bg-col: rgba(41, 118, 148, 0.75);
 
     --project-width: 10rem;
     --project-height: 8rem;
@@ -47,13 +50,17 @@
     --proj-desc-col: white;
     --proj-desc-font-size: 2rem;
 
+    --proj-desc-bg-col: rgba(41, 118, 148, 0.75);
+
     --person-name-font-size: 2.25rem;
-    --person-width: 32rem;
-    --person-height: 40rem;
+    --person-width: 32em;
+    --person-height: 38rem;
+    --person-dsgn-font-size: 1.75rem;
 
     --connect-club-ttl-font-size: 5rem;
     --connect-logo-width: 12rem;
     --connect-niser-logo-width: 16rem;
+    --connect-desc-bg-col: rgba(41, 118, 148, 0.75);
 
     --footer-text-col: rgb(221, 203, 200);
     --footer-bg-col: rgb(194, 171, 95);
@@ -89,6 +96,8 @@ a:hover, a:link, a:active, a:any-link, a:visited
 .mail, .whatsapp, .yt, .fb, .insta, .github {
     color: white;
 
+    -moz-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
 }
 
@@ -130,8 +139,6 @@ a:hover, a:link, a:active, a:any-link, a:visited
 {
     height: 100vh;
     text-align: center;
-
-    /* backdrop-filter: blur(10px); */
 }
 
 /* All the white spans */
@@ -162,18 +169,24 @@ a:hover, a:link, a:active, a:any-link, a:visited
 {
     width: var(--logo-width);
 
+    -moz-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 
 #logo:hover
 {
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 
 #nav
 {
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
 
     padding: 2rem;
 
@@ -186,6 +199,8 @@ a:hover, a:link, a:active, a:any-link, a:visited
 
 #nav.scrolled {
     background: rgba(0,0,0,0.6);
+
+    -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
 }
 
@@ -213,17 +228,18 @@ a:hover, a:link, a:active, a:any-link, a:visited
 /* Clearing floats */
 #nav:before,
 #nav:after {
-  content: "";
-  display: table;
+    content: "";
+    display: table;
+
 }
 
 #nav:after {
-  clear: both;
+    clear: both;
 }
 
 #nav {
-  clear: both;
-  *zoom: 1;
+    clear: both;
+    *zoom: 1;
 }
 
 /* HOME */
@@ -289,12 +305,13 @@ footer
 
     font-size: var(--about-desc-font-size);
 
-    background: rgba(41, 118, 148, 0.75); /* VAR */
+    background: var(--about-desc-bg-col);
 
+    -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
 
-    /* -webkit-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
-    /* -moz-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
+    -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
     box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
     
     height: 100%;
@@ -303,6 +320,8 @@ footer
 /* PROJECTS */
 #proj
 {
+    display: -moz-grid;
+    display: -ms-grid;
     display: grid;
 
     grid-template-columns: 6fr 6fr;
@@ -319,8 +338,13 @@ footer
     padding: 3rem;
     margin: 2rem;
 
-    background: rgba(41, 118, 148, 0.75); /* VAR */
+    background: var(--proj-desc-bg-col);
+
+    -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
+
+    -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
     box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
 
     text-align: center;
@@ -342,6 +366,8 @@ footer
     height: var(--proj-img-height);
 
     border: 0.2rem solid wheat;
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 1rem 0 rgba(0,0,0,0.85);
     box-shadow: 0 0 1rem 0 rgba(0,0,0,0.85);
 
     margin:  1rem 3rem;
@@ -379,6 +405,8 @@ footer
     width: var(--person-width);
     height: var(--person-height);
 
+    -webkit-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 2rem 0 rgba(0,0,0,0.85);
     box-shadow: 0 0 2rem 0 rgba(0,0,0,0.85);
 }
 
@@ -386,7 +414,7 @@ footer
 {
     float: left;
     width: 100%;
-    height: auto;
+    height: 100%;
 
     text-align: center;
 
@@ -403,12 +431,16 @@ footer
     z-index: 1;
 
     background-color: rgba(146, 212, 221, 0.75);
+
+    -webkit-backdrop-filter: blur(0.8rem);
     backdrop-filter: blur(0.8rem);
 
     overflow: hidden;
     width: 100%;
     height: 0;
 
+    -moz-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
 }
 
@@ -418,19 +450,28 @@ footer
 
 .person-name
 {
-    margin: 1.25rem 0;
+    margin: 1rem 0;
+    margin-bottom: 0;
 
     color: rgb(13, 113, 228);
     
 	font-family: Aleo;
 	font-weight: 600;
     font-size: var(--person-name-font-size);
+}
 
-    border-radius: 5px;
+.person-dsgn {
+    /* margin-bottom: 0.3rem; */
+
+    color: rgb(13, 113, 228);
+    
+	font-family: Aleo;
+	font-weight: 600;
+    font-size: var(--person-dsgn-font-size);
 }
 
 .person-social-links {
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .person-details {
@@ -448,12 +489,13 @@ footer
 
     font-size: var(--about-desc-font-size);
 
-    background: rgba(41, 118, 148, 0.75); /* VAR */
+    background: var(--connect-desc-bg-col);
 
+    -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
 
-    /* -webkit-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
-    /* -moz-box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.75); */
+    -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
     box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
     
     height: 100%;
@@ -480,11 +522,17 @@ footer
 
     margin: 2rem 0;
 
+    -moz-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 
 #connect-logo:hover
 {
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -493,6 +541,8 @@ footer
     width: var(--connect-niser-logo-width);
     margin: 1rem 0;
 
+    -moz-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 
