@@ -609,3 +609,36 @@ footer
         font-size: 4rem;
     }
 } */
+
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 8rem;
+    right: 4rem;
+
+    width: 6rem;
+    height: 6rem;
+
+    padding: 2rem;
+
+    background-color: rgba(255,255,255.0.7);
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+
+    -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+
+    font-size: 18px;
+    color: white;
+    text-align: center;
+
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#backToTop:hover {
+    background-color: rgba(184, 197, 107, 0.842);
+}
