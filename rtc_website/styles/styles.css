@@ -69,6 +69,8 @@
 body
 {
     background: white center/cover no-repeat fixed;
+
+    -webkit-overflow-scrolling: touch;
 }
 
 /* .parallax-mirror {
@@ -574,7 +576,7 @@ footer
 
     padding: 2rem;
 
-    background-color: rgba(255,255,255.0.7);
+    background-color: rgba(76, 222, 241, 0.6);
     -webkit-backdrop-filter: blur(2rem);
     backdrop-filter: blur(2rem);
 
@@ -592,7 +594,7 @@ footer
 }
 
 #backToTop:hover {
-    background-color: rgba(184, 197, 107, 0.842);
+    background-color: rgba(210, 226, 115, 0.842);
 }
 
 /* For Responsiveness: Media Rules */
