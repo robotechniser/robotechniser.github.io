@@ -15,6 +15,8 @@
     --intro-ttl-font-size: 8rem;
     --intro-ttl-col: rgb(233, 224, 207);
 
+    --menu-sidebar-bg-col: rgba(41, 118, 148, 0.75);
+
     --nav-link-font-size: 2.2rem;
     --nav-link-col: yellow;
     --nav-link-margin: 2vw;
@@ -133,6 +135,126 @@ ul {
     color: rgb(23, 21, 21);
 }
 
+/* Hamburger Menu */
+/* https://www.templatemonster.com/blog/build-navigation-menu-css-jquery/ */
+.toggle-button {
+    display: none;
+
+    position: fixed;
+    top: 3rem;
+    right: 6rem;
+
+    width: 4.5rem;
+    height: 4rem;
+
+    padding: 0.5rem;
+
+    transition: .25s;
+    z-index: 100;
+}
+.toggle-button:hover {
+    cursor: pointer;
+}
+.toggle-button .menu-bar {
+    position: absolute;
+    border-radius: 2px;
+    width: 80%;
+    transition: .5s;
+}
+.toggle-button .menu-bar-top {
+    border: 4px solid white;
+    border-bottom: none;
+    top: 0;
+}
+.toggle-button .menu-bar-middle {
+    height: 4px;
+    background-color: white;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    top: 4px;
+}
+.toggle-button .menu-bar-bottom {
+    border: 4px solid white;
+    border-top: none;
+    top: 22px;
+}
+.button-open .menu-bar-top {
+    transform: rotate(45deg) translate(8px, 8px);
+    transition: .5s;
+}
+.button-open .menu-bar-middle {
+    transform: translate(230px);
+    transition: .1s ease-in;
+    opacity: 0;
+}
+.button-open .menu-bar-bottom {
+    transform: rotate(-45deg) translate(8px, -7px);
+    transition: .5s;
+}
+
+.menu-sidebar {
+    background-color: var(--menu-sidebar-bg-col);
+
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    height: 100%;
+    width: 30rem;
+    margin-right: -30rem;
+
+    overflow: auto;
+    
+    z-index: 99;
+
+    text-align: center;
+    line-height: 8rem;
+
+    transition: .25s;
+}
+
+.menu-show {
+    margin-right: 0;
+    -webkit-box-shadow: 0 0 6rem 0 rgba(241, 239, 209, 0.75);
+    -moz-box-shadow: 0 0 6rem 0 rgba(241, 239, 209, 0.75);
+    box-shadow: 0 0 6rem 0 rgba(241, 239, 209, 0.75);
+}
+
+.menu-links
+{
+    position: relative;
+    top: 10rem;
+
+    margin-top: 10rem;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem; /* VAR */
+    color: var(--nav-link-col);
+
+    margin: 4rem; /* VAR */
+}
+
+/* .menu-sidebar li > a:after {
+    content: "";
+    display: block;
+    height: 0.15em;
+    position: absolute;
+    top: 100%;
+    width: 102%;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(to right, transparent 50.3%, #FFFA3B 50.3%);
+    transition: background-position .2s .1s ease-out;
+    background-size: 200% auto;
+}
+
+.menu-sidebar li > a:hover:after {
+    background-position: -100% 0;
+} */
+
 /* For all the tiles -- Individual tiles can be styled, well, individually */
 .tiles
 {
@@ -185,9 +307,6 @@ ul {
 
 #nav
 {
-    /* position: sticky;
-    top: 0; */
-
     padding: 2rem;
 
     background: inherit;
@@ -209,7 +328,7 @@ ul {
     font-size: var(--nav-link-font-size);
     color: var(--nav-link-col);
 
-    margin: var(--nav-link-margin);
+    margin: 2.5vh var(--nav-link-margin);
 
     text-align: center;
 }

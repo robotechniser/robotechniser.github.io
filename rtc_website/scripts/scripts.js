@@ -20,14 +20,26 @@ $(document).on('click', 'a[href^="#"]', function(e) {
     $('body, html').animate({scrollTop: pos});
 });
 
-// When the user scrolls down 20px from the top of the document, show the backToTop button
-window.onscroll = function() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("backToTop").style.display = "block";
-  } else {  
-    document.getElementById("backToTop").style.display = "none";
+$(document).ready(function() {
+  var $toggleButton = $('.toggle-button'),
+      $menuWrap = $('.menu-sidebar');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+      document.getElementById("backToTop").style.display = "block";
+      document.getElementById("toggle").style.display = "block";
+    } else {  
+      document.getElementById("backToTop").style.display = "none";
+      document.getElementById("toggle").style.display = "none";
+    }
   }
-}
+
+  $toggleButton.on('click', function() {
+      $(this).toggleClass('button-open');
+      $menuWrap.toggleClass('menu-show');
+  });
+});
+
 // Parallax Fix for Android and iOS devices - DOESN'T WORK
 $("#home, #about, #proj, #team, #connect").parallax({
   iosFix: true,
