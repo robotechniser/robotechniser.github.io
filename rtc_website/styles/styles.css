@@ -136,6 +136,7 @@ a:hover, a:link, a:active, a:any-link, a:visited
 
 /* All the white spans */
 .whitespan {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -253,7 +254,8 @@ a:hover, a:link, a:active, a:any-link, a:visited
 .down-arrow {
     display: block;
     position: relative;
-    top: 71%;
+    top: 70vh;
+
     color: var(--down-arrow-color);
 
     font-size: var(--down-arrow-size);
@@ -275,7 +277,7 @@ footer
     background-color: var(--footer-bg-col);
 
     color: var(--footer-text-col);
-    font: 1.75rem 'Segoe UI', cursive;
+    font: 1.75rem 'Segoe UI', 'Courier New', Courier, monospace;
     font-weight: 500;
     text-align: center;
 }
@@ -483,7 +485,7 @@ footer
 }
 
 #connect {
-    height: var(--connect-height);
+    height: auto;
     padding: 3vw;
 }
     
@@ -512,7 +514,7 @@ footer
 }
 
 .connect-niser {
-    margin: 3rem;
+    margin: 3vh 0;
 
     font-size: 3rem;
     font-family: Inconsolata;
@@ -549,9 +551,16 @@ footer
     transition: 0.3s ease;
 }
 
+.club-details-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .club-details {
     font-size: var(--club-details-font-size);
-    margin: 3rem;
+    margin: 0 3rem;
 }
 
 #backToTop {
@@ -587,18 +596,14 @@ footer
 }
 
 /* For Responsiveness: Media Rules */
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1024px)
 {
-
+    
 }
 
-@media screen and (min-width: 992px) and (max-width: 1200px)
+@media screen and (min-width: 960px) and (max-width: 1024px)
 {
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px)
-{
+    /* Nav */
     .ulist {
         display: inline-block;
     }
@@ -606,13 +611,14 @@ footer
         display: block;
         float: none;
     }
+    /* Projects */
     #proj
     {
         grid-template-columns: 12fr;
 
         text-align: center;
 
-        padding: 1.5rem;
+        padding: 0.75rem;
     }
     .proj-img {
         margin: 3rem;
@@ -620,9 +626,16 @@ footer
     .proj-desc {
         margin: 4rem;
     }
+    /* Team */
+    #team {
+        padding: 2.5rem;
+    }
+    .person {
+        margin: 5rem;
+    }
 }
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 960px)
 {
     :root {
         --logo-width: 8rem;
@@ -646,9 +659,11 @@ footer
         --connect-niser-logo-width: 14rem;
         --club-details-font-size: 6rem;
     }
+    /* Whitespan */
     .whitespan {
         padding: 1rem 0;
     }
+    /* Nav */
     .ulist {
         display: inline-block;
     }
@@ -656,17 +671,19 @@ footer
         display: block;
         float: none;
     }
+    /* Chevron - Down-arrow */
     .down-arrow {
         position: relative;
-        top: 64%;
+        top: 74vh;
     }
+    /* Projects */
     #proj
     {
         grid-template-columns: 12fr;
 
         text-align: center;
 
-        padding: 1.5rem;
+        padding: 0.25rem;
     }
     .proj-img {
         margin: 3rem;
@@ -674,15 +691,21 @@ footer
     .proj-desc {
         margin: 4rem;
     }
+    /* Team */
+    #team {
+        padding: 2rem;
+    }
+    .person {
+        margin: 1.5rem;
+    }
+    /* Connect/About */
     .club-details {
-        margin: 1.75rem;
+        margin: 0 1.75rem;
         line-height: 10rem;
     }
+    /* Footer */
     footer
     {
         padding: 1rem;
-
-        font: 1.4rem 'Segoe UI', cursive;
-        font-weight: 500;
     }
 }

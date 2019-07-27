@@ -2,7 +2,8 @@
 <html lang="en">
     <head prefix="og:http://ogp.me/ns#">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
         <meta name="author" content="RoboTech Club">
         <!-- <meta name="description" content="TO BE EDITED."> ** -->
 
@@ -20,7 +21,7 @@
     </head>
     <body>
         <!-- HOME -->
-        <section class="tiles" id="home" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?robots">
+        <section class="tiles" id="home" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?robots" data-android-fix="true" data-ios-fix="true">
             <!-- THE NAVBAR -->
             <nav id="nav">
                 <!-- THE LOGO -->
@@ -42,14 +43,14 @@
         <!-- ABOUT US -->
         <div class="whitespan about-us" id="about-ws">About us</div>
 
-        <section class="tiles" id="about" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?groups">
+        <section class="tiles" id="about" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?groups" data-android-fix="true" data-ios-fix="true">
             <p class="about-desc">We are the RoboTech Club of National Institute of Science Education and Research, Bhubaneswar. MORE TEXT HERE</p>
         </section>
 
         <!-- PROJECTS -->
         <div class="whitespan projects" id="proj-ws">Discover our projects</div>
 
-        <section class="tiles" id="proj" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?projects">
+        <section class="tiles" id="proj" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?projects" data-android-fix="true" data-ios-fix="true">
             <div class="project proj-1">
                 <h2 class="proj-ttl">
                     Robotic Sketcher
@@ -134,7 +135,7 @@
         <!-- The Team -->
         <div class="whitespan team" id="team-ws"><i class="fas fa-chevron-left"></i>The Team/<i class="fas fa-chevron-right"></i></div>
 
-        <section class="tiles" id="team" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?team">
+        <section class="tiles" id="team" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?team" data-android-fix="true" data-ios-fix="true">
             <span class="person">
                 <img class="person-pic" title="Manabputra" src="images/people/manab.webp">
                 <div class="overlay">
@@ -333,7 +334,7 @@
         <!-- Connect with us -->
         <div class="whitespan connect" id="connect-ws">Connect With Us</div>
 
-        <section  class="tiles" id="connect" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?phones">
+        <section  class="tiles" id="connect" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?phones" data-android-fix="true" data-ios-fix="true">
             <div class="connect-desc">
                 <!-- THE LOGO -->
                 <a id="connect-logo-link" href="" title="RTC Homepage" target="_top"><img id="connect-logo" src="images/logo.webp"></a>
@@ -348,12 +349,14 @@
                     Bhubaneswar, India
                 </div>
                 <!-- MAIL, GITHUB, WHATSAPP, YT, FB, INSTA -->
-                <a class="club-details mail" href="mailto:rtc@niser.ac.in" title="Mail Us" target="_blank"><i class="far fa-envelope"></i></a>
-                <a class="club-details github" href="" title="Link to our GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                <a class="club-details whatsapp" href="tel:1234567890" title="WhatsApp Us" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a class="club-details yt" href="https://www.youtube.com/channel/UCDhZH_ndJbuxbzmKAyanrqQ" title="Link to our YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a class="club-details fb" href="" title="Link to our Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a class="club-details insta" href="" title="Link to our Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="club-details-container">
+                    <a class="club-details mail" href="mailto:rtc@niser.ac.in" title="Mail Us" target="_blank"><i class="far fa-envelope"></i></a>
+                    <a class="club-details github" href="" title="Link to our GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="club-details whatsapp" href="tel:1234567890" title="WhatsApp Us" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="club-details yt" href="https://www.youtube.com/channel/UCDhZH_ndJbuxbzmKAyanrqQ" title="Link to our YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="club-details fb" href="" title="Link to our Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a class="club-details insta" href="" title="Link to our Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
                 <!-- GFORM LINK -->
             </div>
         </section>

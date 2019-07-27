@@ -28,3 +28,9 @@ window.onscroll = function() {
     document.getElementById("backToTop").style.display = "none";
   }
 }
+// Parallax Fix for Android and iOS devices - DOESN'T WORK
+$("#home, #about, #proj, #team, #connect").parallax({
+  iosFix: true,
+  androidFix: true,
+  overScrollFix: true
+});
