@@ -88,6 +88,10 @@ a:hover, a:link, a:active, a:any-link, a:visited
     text-decoration: none !important;
 }
 
+ul {
+    list-style-type: none !important;
+}
+
 .mail, .whatsapp, .yt, .fb, .insta, .github {
     color: white;
 
@@ -193,17 +197,6 @@ a:hover, a:link, a:active, a:any-link, a:visited
     z-index: 10;
 }
 
-#nav.scrolled {
-    background: rgba(0,0,0,0.6);
-
-    -webkit-backdrop-filter: blur(1rem);
-    backdrop-filter: blur(1rem);
-}
-
-#nav-list {
-    list-style-type: none;
-}
-
 .nav-links
 {
     display: block;
@@ -261,6 +254,8 @@ a:hover, a:link, a:active, a:any-link, a:visited
     color: var(--down-arrow-color);
 
     font-size: var(--down-arrow-size);
+
+    z-index: 99;
 }
 
 .down-arrow a {
@@ -293,7 +288,6 @@ footer
 /* ABOUT */
 #about {
     padding: 5vw 6vw;
-    /* padding-top: 10vw; */
 }
 
 .about-desc {
@@ -676,7 +670,7 @@ footer
     /* Chevron - Down-arrow */
     .down-arrow {
         position: relative;
-        top: 74vh;
+        top: 68vh;
     }
     /* Projects */
     #proj
