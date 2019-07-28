@@ -24,7 +24,7 @@ $(document).ready(function() {
     var $toggleButton = $('.toggle-button'),
     $menuWrap = $('.menu-sidebar');
 
-    if (document.documentElement.clientWidth > 1024) {
+    if (document.documentElement.clientWidth > 1124) {
         window.onscroll = function() {
             if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
                 if ($toggleButton.hasClass('button-open') && $menuWrap.hasClass('menu-show')) {
@@ -41,6 +41,24 @@ $(document).ready(function() {
                 document.getElementById("backToTop").style.display = "none"; // For backToTop
                 document.getElementById("toggle").style.display = "none"; // For Hamburger Menu
                 document.getElementById("menu").style.display = "none"; // For Hamburger Menu
+            }
+        }
+    }
+
+    if (document.documentElement.clientWidth < 1124) {
+        window.onscroll = function() {
+            if ($toggleButton.hasClass('button-open') && $menuWrap.hasClass('menu-show')) {
+                $toggleButton.removeClass('button-open');
+                $menuWrap.removeClass('menu-show');
+                if ($('.global-overlay').hasClass('dimmed')) {
+                    $('.global-overlay').removeClass('dimmed');
+                }
+            }
+            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                document.getElementById("backToTop").style.display = "block"; // For backToTop
+            }
+            else {
+                document.getElementById("backToTop").style.display = "none"; // For backToTop
             }
         }
     }

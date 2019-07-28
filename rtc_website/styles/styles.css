@@ -72,11 +72,15 @@
 body
 {
     background: white center/cover no-repeat fixed;
-
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 /* EXPERIMENTAL */
+.toggle-on {
+    overflow: hidden;
+}
+
 .dimmed {
     -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
@@ -218,7 +222,6 @@ ul {
     -webkit-transform: rotate(-45deg) translate(8px, -7px);
     transform: rotate(-45deg) translate(8px, -7px);
 
-    
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -688,10 +691,6 @@ footer
 {
     width: var(--connect-niser-logo-width);
     margin: 1rem 0;
-
-    -moz-transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
 }
 
 .club-details-container {
