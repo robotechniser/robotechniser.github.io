@@ -76,6 +76,16 @@ body
     -webkit-overflow-scrolling: touch;
 }
 
+/* EXPERIMENTAL */
+.dimmed {
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+
+    -ms-filter: opacity(0.9) contrast(40%);
+    -webkit-filter: opacity(0.9) contrast(40%);
+    filter: opacity(0.9) contrast(40%);
+}
+
 a:hover, a:link, a:active, a:any-link, a:visited
 {
     text-decoration: none !important;
@@ -177,19 +187,41 @@ ul {
 }
 
 .button-open .menu-bar-top {
+    -moz-transform: rotate(45deg) translate(8px, 8px);
+    -ms-transform: rotate(45deg) translate(8px, 8px);
+    -o-transform: rotate(45deg) translate(8px, 8px);
+    -webkit-transform: rotate(45deg) translate(8px, 8px);
     transform: rotate(45deg) translate(8px, 8px);
+
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
     transition: .5s;
 }
 
 .button-open .menu-bar-middle {
+    -moz-transform: translate(-22rem);
+    -ms-transform: translate(-22rem);
+    -o-transform: translate(-22rem);
+    -webkit-transform: translate(-22rem);
     transform: translate(-22rem);
-    transition: .1s ease-in;
+
+    -moz-transition: 0.1s ease-in;
+    -webkit-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
     opacity: 0;
 }
 
 .button-open .menu-bar-bottom {
+    -moz-transform: rotate(-45deg) translate(8px, -7px);
+    -ms-transform: rotate(-45deg) translate(8px, -7px);
+    -o-transform: rotate(-45deg) translate(8px, -7px);
+    -webkit-transform: rotate(-45deg) translate(8px, -7px);
     transform: rotate(-45deg) translate(8px, -7px);
-    transition: .5s;
+
+    
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .menu-sidebar {
@@ -213,7 +245,9 @@ ul {
     text-align: center;
     line-height: 8rem;
 
-    transition: .25s;
+    -moz-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
 }
 
 .menu-show {
@@ -228,18 +262,16 @@ ul {
     position: relative;
     top: 28vh;
 
-    /* margin-top: 10rem; */
-
     font-family: 'Courier New', Courier, monospace;
     font-size: 2.5rem; /* VAR */
     font-weight: 600;
     color: var(--nav-link-col);
 }
 
-/* .menu-sidebar li > a:after {
+.menu-sidebar li > a:after, .nav-links:after {
     content: "";
     display: block;
-    height: 0.15em;
+    height: 0.3rem;
     position: absolute;
     top: 100%;
     width: 102%;
@@ -250,9 +282,9 @@ ul {
     background-size: 200% auto;
 }
 
-.menu-sidebar li > a:hover:after {
+.menu-sidebar li > a:hover:after, .nav-links:hover:after {
     background-position: -100% 0;
-} */
+}
 
 /* For all the tiles -- Individual tiles can be styled, well, individually */
 .tiles
@@ -843,7 +875,7 @@ footer
     .person {
         margin: 5rem;
     }
-    ..person-name {
+    .person-name {
         margin: 1rem 0 0 0;
     }
     .person-social-links {

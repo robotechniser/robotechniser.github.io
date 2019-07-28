@@ -15,7 +15,7 @@
 
         <!-- Favicon - More can be added, depending on the devices, we plan to support -->
         <link rel="shortcut icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32">
-
+        
         <link href="styles/styles.css" rel="stylesheet" type="text/css">
         <title>Home | RoboTech Club</title>
     </head>
@@ -26,7 +26,7 @@
             <div class="menu-bar menu-bar-middle"></div>
             <div class="menu-bar menu-bar-bottom"></div>
         </span>
-        <div class="menu-sidebar">
+        <div id="menu" class="menu-sidebar">
             <ul class="menu">
                 <li><a tabindex="0" class="menu-links" href="path/to/blog" title="Blog">BLOG</a></li>
                 <li><a tabindex="0" class="menu-links" href="#about-ws" title="About Us">ABOUT</a></li>
@@ -35,414 +35,417 @@
                 <li><a tabindex="0" class="menu-links" href="#connect-ws" title="Connect with us">JOIN US</a></li>
             </ul>     
         </div>
-        <!-- THE LOGO -->
-        <a tabindex="0" id="logo-link" href="index.html" title="RTC Homepage" target="_top">
-            <picture>
-                <source id="logo" type="image/webp" srcset="images/logo.webp">
-                <img id="logo" src="images/logo.png">
-            </picture>
-        </a>
-        <!-- HOME -->
-        <section class="tiles" id="home" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?robots" data-android-fix="true" data-ios-fix="true">
-            <!-- THE NAVBAR -->
-            <nav id="nav">
-                <ul id="nav-list">
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="path/to/blog" title="Blog">BLOG</a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#about-ws" title="About Us">ABOUT</a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#proj-ws" title="Our Projects">PROJECTS</a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#team-ws" title="Our Team">TEAM</a></li>
-                    <li class="ulist"><a tabindex="0" class="nav-links" href="#connect-ws" title="Connect with us">JOIN US</a></li>
-                </ul>
-            </nav>
-            <h1 id="ttl">
-                NISER RoboTech Club
-            </h1>
-            <div class="down-arrow"><a tabindex="0" href="#about-ws"><i class="fas fa-chevron-down"></i></a></div>
-        </section>
-
-        <!-- ABOUT US -->
-        <div id="about-ws"></div> <!-- To make the nav-links/menu-links work -->
-        <div class="whitespan about-us">About us</div>
-
-        <section class="tiles" id="about" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?groups" data-android-fix="true" data-ios-fix="true">
-            <p class="about-desc">We are the RoboTech Club of National Institute of Science Education and Research, Bhubaneswar. MORE TEXT HERE</p>
-        </section>
-
-        <!-- PROJECTS -->
-        <div id="proj-ws"></div> <!-- To make the nav-links/menu-links work -->
-        <div class="whitespan projects">Our projects</div>
-
-        <section class="tiles" id="proj" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?projects" data-android-fix="true" data-ios-fix="true">
-            <div class="project proj-1">
-                <h2 class="proj-ttl">
-                    Robotic Sketcher
-                </h2>
-                <div class="proj-details">
-                    <img class="proj-img" src="projects/robo-sketcher/rs-calib.jpg" title="Testing & Calibrating the Robo Sketcher">
-                    <p class="proj-desc">
-                        SUMMARY TEXT.
-                        <a href="">Learn more...</a>
-                    </p>
-                </div>
-            </div>
-            <div class="project proj-2">
-                <h2 class="proj-ttl">
-                    Smart Mirror
-                </h2>
-                <div class="proj-details">
-                    <img class="proj-img" src="projects/robo-sketcher/rs-calib.jpg" alt="Testing & Calibrating the Robo Sketcher">
-                    <p class="proj-desc">
-                        SUMMARY TEXT.
-                        <a href="">Learn more...</a>
-                    </p>
-                </div>
-            </div>
-            <div class="project proj-3">
-                <h2 class="proj-ttl">
-                    Radio Telescope
-                </h2>
-                <div class="proj-details">
-                    <img class="proj-img" src="projects/RT/rt.jpg" title="Image from http://www.stargazing.net/david/radio/itty_bitty_radio_telescope.html">
-                    <p class="proj-desc">
-                        It is a combined project with NISER Astronomy Club. It consists of a basic setup, that can detect radio waves, coming from target celestial body, with a maximum frequency of 22KHz. The main component is a satellite dish and a satellite finder, used to measure intensity of incident waves. At the moment, we can detect the Sun with an intensity of about 8 dB.<br><br>
-                        In the future, we plan to use a more advanced satellite finder, with more sensitivity and larger frequency range. We also plan to get a bigger dish, to collect more data and possibly detect Jupiter and Moon. The data obtained can be analysed using various softwares like Radio Sky Map and can be used for practical purposes, like calculating surface temperature of the Sun.
-                    </p>
-                </div>
-            </div>
-            <div class="project proj-4">
-                <h2 class="proj-ttl">
-                    Tesla Coil
-                </h2>
-                <div class="proj-details">
-                    <img class="proj-img" src="projects/TC/tc.jpg" alt="Image from https://www.electroboom.com/?p=521">
-                    <p class="proj-desc">
-                        We've made a Solid State Tesla Coil (Slayer Exciter), with a secondary coil of 400 turns, that can output ~1200V. It can light up fluorescent bulbs in close proximity and can transmit wirless electricity (~5V) to small circuits too.
-                        We plan to make a bigger version, with more turns in the secondary coil (possibly 1000 turns) and with a new circuit, that can handle more power with MOSFET drivers, with a planned output of more than 5000V to get visible arcs.
-                        With this tesla coil, we can understand wireless power transmission in an illustrative way. Seeing a CFL light up wirelessly makes it an attractive project and people will surely be interested to know the science behind it.
-                    </p>
-                </div>
-            </div>
-            <div class="project proj-5">
-                <h2 class="proj-ttl">
-                    Line Follower Robot
-                </h2>
-                <div class="proj-details">
-                    <img class="proj-img" src="projects/robo-sketcher/rs-calib.jpg" alt="Testing & Calibrating the Robo Sketcher">
-                    <p class="proj-desc">
-                        SUMMARY TEXT.
-                        <a href="">Learn more...</a>
-                    </p>
-                </div>
-            </div>
-            <div class="project proj-6">
-                <h2 class="proj-ttl">
-                    8-Bit Computer
-                </h2>
-                <div class="proj-details">
-                    <img class="proj-img" src="projects/8BitC/8bitC.jpg" title="Image from https://eater.net/8bit/kits">
-                    <p class="proj-desc">
-                        We plan to make a 8-bit computer on breadboard, using only simple logic gates. Its main objective would be to understand computer logic at the very basic level and see how things work at that level. It ia a big project, but we would work gradually and make each module progressively, and learn how information is processed electronically.
-                        It will consist of various modules:
-                        Clock module: outputs PWM signal with variable clock frequency
-                        Registers: stores memory (64 bits)
-                        Arthimetic logic unit: used to carry out operations like addition and subtraction
-                        RAM: 16 bits
-                        Output register: stores output values
-                        For more information, check out: <a href="https://eater.net/8bit/" target="_blank">https://eater.net/8bit/</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- The Team -->
-        <div id="team-ws"></div> <!-- To make the nav-links/menu-links work -->
-        <div class="whitespan team"><i class="fas fa-chevron-left"></i>The Team/<i class="fas fa-chevron-right"></i></div>
-
-        <section class="tiles" id="team" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?team" data-android-fix="true" data-ios-fix="true">
-            <span class="person">
-                <picture title="Manabputra">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/manab.webp">
-                    <img class="person-pic" src="images/people/jpg/manab.jpg" alt="Manabputra">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Manabputra</p>
-                    <div class="person-social-links">
-                        <p class="person-dsgn">Club Co-ordinator</p>
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Abhinav">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/abhinav.webp">
-                    <img class="person-pic" src="images/people/jpg/abhinav.jpg" alt="Abhinav">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Abhinav</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Anirudh">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/anirudh.webp">
-                    <img class="person-pic" src="images/people/jpg/anirudh.jpg" alt="Anirudh">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Anirudh</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Devansh">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/devansh.webp">
-                    <img class="person-pic" src="images/people/jpg/devansh.jpg" alt="Devansh">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Devansh</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Joydeep">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/joydeep.webp">
-                    <img class="person-pic" src="images/people/jpg/joydeep.jpg" alt="Joydeep">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Joydeep</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Jyothish J">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/jyothish.webp">
-                    <img class="person-pic" src="images/people/jpg/jyothish.jpg" alt="Jyothish J">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Jyothish</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Mavani">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/mavani.webp">
-                    <img class="person-pic" src="images/people/jpg/mavani.jpg" alt="Mavani">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Mavani</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Nelson">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/nelson.webp">
-                    <img class="person-pic" src="images/people/jpg/nelson.jpg" alt="Nelson">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Nelson</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Nishant">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/nishant.webp">
-                    <img class="person-pic" src="images/people/jpg/nishant.jpg" alt="Nishant">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Nishant</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Nitesh">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/nitesh.webp">
-                    <img class="person-pic" src="images/people/jpg/nitesh.jpg" alt="Nitesh">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Nitesh</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Shriman">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/shriman.webp">
-                    <img class="person-pic" src="images/people/jpg/shriman.jpg" alt="Shriman">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Shriman</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Soumyadeep">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/soumyadeep.webp">
-                    <img class="person-pic" src="images/people/jpg/soumyadeep.jpg" alt="Soumyadeep">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Soumyadeep</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Sourav">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/sourav.webp">
-                    <img class="person-pic" src="images/people/jpg/sourav.jpg" alt="Sourav">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Sourav</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Tata">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/tata.webp">
-                    <img class="person-pic" src="images/people/jpg/tata.jpg" alt="Tata">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Tata</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Varun">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/varun.webp">
-                    <img class="person-pic" src="images/people/jpg/varun.jpg" alt="Varun">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Varun</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-            <span class="person">
-                <picture title="Vivek">
-                    <source class="person-pic" type="image/webp" srcset="images/people/webp/vivek.webp">
-                    <img class="person-pic" src="images/people/jpg/vivek.jpg" alt="Vivek">
-                </picture>
-                <div class="overlay">
-                    <p class="person-name">Vivek</p>
-                    <div class="person-social-links">
-                        <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </span>
-        </section>
-
-        <!-- Connect with us -->
-        <div id="connect-ws"></div> <!-- To make the nav-links/menu-links work -->
-        <div class="whitespan connect">Connect With Us</div>
-
-        <section  class="tiles" id="connect" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?phones" data-android-fix="true" data-ios-fix="true">
-            <div class="connect-desc">
-                <!-- THE LOGO -->
-                <a id="connect-logo-link" href="" title="RTC Homepage" target="_top">
-                    <picture>
-                        <source id="connect-logo" type="image/webp" srcset="images/logo.webp">
-                        <img id="connect-logo" src="images/logo.png">
-                    </picture>
-                </a>
-                <!-- THE TITLE -->
-                <h1 id="connect-club-ttl">
-                        NISER RoboTech Club
-                </h1>
-                <!-- NISER ADDRESS -->
+        <!-- For a dimming effect -->
+        <div class="global-overlay">
+            <!-- THE LOGO -->
+            <a tabindex="0" id="logo-link" href="index.html" title="RTC Homepage" target="_top">
                 <picture>
-                    <source id="connect-niser-logo" type="image/webp" srcset="images/niser-logo-light.webp">
-                    <img id="connect-niser-logo" src="images/niser-logo-light.png">
+                    <source id="logo" type="image/webp" srcset="images/logo.webp">
+                    <img id="logo" src="images/logo.png">
                 </picture>
-                <div class="connect-niser">
-                    <a href="http://www.niser.ac.in">National Institute of Science Education and Research<br></a>
-                    Bhubaneswar, India
+            </a>
+            <!-- HOME -->
+            <section class="tiles" id="home" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?robots" data-android-fix="true" data-ios-fix="true">
+                <!-- THE NAVBAR -->
+                <nav id="nav">
+                    <ul id="nav-list">
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="path/to/blog" title="Blog">BLOG</a></li>
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#about-ws" title="About Us">ABOUT</a></li>
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#proj-ws" title="Our Projects">PROJECTS</a></li>
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#team-ws" title="Our Team">TEAM</a></li>
+                        <li class="ulist"><a tabindex="0" class="nav-links" href="#connect-ws" title="Connect with us">JOIN US</a></li>
+                    </ul>
+                </nav>
+                <h1 id="ttl">
+                    NISER RoboTech Club
+                </h1>
+                <div class="down-arrow"><a tabindex="0" href="#about-ws"><i class="fas fa-chevron-down"></i></a></div>
+            </section>
+
+            <!-- ABOUT US -->
+            <div id="about-ws"></div> <!-- To make the nav-links/menu-links work -->
+            <div class="whitespan about-us">About us</div>
+
+            <section class="tiles" id="about" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?groups" data-android-fix="true" data-ios-fix="true">
+                <p class="about-desc">We are the RoboTech Club of National Institute of Science Education and Research, Bhubaneswar. MORE TEXT HERE</p>
+            </section>
+
+            <!-- PROJECTS -->
+            <div id="proj-ws"></div> <!-- To make the nav-links/menu-links work -->
+            <div class="whitespan projects">Our projects</div>
+
+            <section class="tiles" id="proj" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?projects" data-android-fix="true" data-ios-fix="true">
+                <div class="project proj-1">
+                    <h2 class="proj-ttl">
+                        Robotic Sketcher
+                    </h2>
+                    <div class="proj-details">
+                        <img class="proj-img" src="projects/robo-sketcher/rs-calib.jpg" title="Testing & Calibrating the Robo Sketcher">
+                        <p class="proj-desc">
+                            SUMMARY TEXT.
+                            <a href="">Learn more...</a>
+                        </p>
+                    </div>
                 </div>
-                <!-- MAIL, GITHUB, WHATSAPP, YT, FB, INSTA -->
-                <div class="club-details-container">
-                    <a class="club-details mail" href="mailto:rtc@niser.ac.in" title="Mail Us" target="_blank"><i class="far fa-envelope"></i></a>
-                    <a class="club-details github" href="" title="Link to our GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                    <a class="club-details whatsapp" href="tel:1234567890" title="WhatsApp Us" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a class="club-details yt" href="https://www.youtube.com/channel/UCDhZH_ndJbuxbzmKAyanrqQ" title="Link to our YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="club-details fb" href="" title="Link to our Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a class="club-details insta" href="" title="Link to our Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="project proj-2">
+                    <h2 class="proj-ttl">
+                        Smart Mirror
+                    </h2>
+                    <div class="proj-details">
+                        <img class="proj-img" src="projects/robo-sketcher/rs-calib.jpg" alt="Testing & Calibrating the Robo Sketcher">
+                        <p class="proj-desc">
+                            SUMMARY TEXT.
+                            <a href="">Learn more...</a>
+                        </p>
+                    </div>
                 </div>
-                <!-- GFORM LINK -->
-            </div>
-        </section>
-        <footer>
-            Powered by <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">Software Development Group</a>, NISER. All rights reserved.
-        </footer>
+                <div class="project proj-3">
+                    <h2 class="proj-ttl">
+                        Radio Telescope
+                    </h2>
+                    <div class="proj-details">
+                        <img class="proj-img" src="projects/RT/rt.jpg" title="Image from http://www.stargazing.net/david/radio/itty_bitty_radio_telescope.html">
+                        <p class="proj-desc">
+                            It is a combined project with NISER Astronomy Club. It consists of a basic setup, that can detect radio waves, coming from target celestial body, with a maximum frequency of 22KHz. The main component is a satellite dish and a satellite finder, used to measure intensity of incident waves. At the moment, we can detect the Sun with an intensity of about 8 dB.<br><br>
+                            In the future, we plan to use a more advanced satellite finder, with more sensitivity and larger frequency range. We also plan to get a bigger dish, to collect more data and possibly detect Jupiter and Moon. The data obtained can be analysed using various softwares like Radio Sky Map and can be used for practical purposes, like calculating surface temperature of the Sun.
+                        </p>
+                    </div>
+                </div>
+                <div class="project proj-4">
+                    <h2 class="proj-ttl">
+                        Tesla Coil
+                    </h2>
+                    <div class="proj-details">
+                        <img class="proj-img" src="projects/TC/tc.jpg" alt="Image from https://www.electroboom.com/?p=521">
+                        <p class="proj-desc">
+                            We've made a Solid State Tesla Coil (Slayer Exciter), with a secondary coil of 400 turns, that can output ~1200V. It can light up fluorescent bulbs in close proximity and can transmit wirless electricity (~5V) to small circuits too.
+                            We plan to make a bigger version, with more turns in the secondary coil (possibly 1000 turns) and with a new circuit, that can handle more power with MOSFET drivers, with a planned output of more than 5000V to get visible arcs.
+                            With this tesla coil, we can understand wireless power transmission in an illustrative way. Seeing a CFL light up wirelessly makes it an attractive project and people will surely be interested to know the science behind it.
+                        </p>
+                    </div>
+                </div>
+                <div class="project proj-5">
+                    <h2 class="proj-ttl">
+                        Line Follower Robot
+                    </h2>
+                    <div class="proj-details">
+                        <img class="proj-img" src="projects/robo-sketcher/rs-calib.jpg" alt="Testing & Calibrating the Robo Sketcher">
+                        <p class="proj-desc">
+                            SUMMARY TEXT.
+                            <a href="">Learn more...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="project proj-6">
+                    <h2 class="proj-ttl">
+                        8-Bit Computer
+                    </h2>
+                    <div class="proj-details">
+                        <img class="proj-img" src="projects/8BitC/8bitC.jpg" title="Image from https://eater.net/8bit/kits">
+                        <p class="proj-desc">
+                            We plan to make a 8-bit computer on breadboard, using only simple logic gates. Its main objective would be to understand computer logic at the very basic level and see how things work at that level. It ia a big project, but we would work gradually and make each module progressively, and learn how information is processed electronically.
+                            It will consist of various modules:
+                            Clock module: outputs PWM signal with variable clock frequency
+                            Registers: stores memory (64 bits)
+                            Arthimetic logic unit: used to carry out operations like addition and subtraction
+                            RAM: 16 bits
+                            Output register: stores output values
+                            For more information, check out: <a href="https://eater.net/8bit/" target="_blank">https://eater.net/8bit/</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- The Team -->
+            <div id="team-ws"></div> <!-- To make the nav-links/menu-links work -->
+            <div class="whitespan team"><i class="fas fa-chevron-left"></i>The Team/<i class="fas fa-chevron-right"></i></div>
+
+            <section class="tiles" id="team" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?team" data-android-fix="true" data-ios-fix="true">
+                <span class="person">
+                    <picture title="Manabputra">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/manab.webp">
+                        <img class="person-pic" src="images/people/jpg/manab.jpg" alt="Manabputra">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Manabputra</p>
+                        <div class="person-social-links">
+                            <p class="person-dsgn">Club Co-ordinator</p>
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Abhinav">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/abhinav.webp">
+                        <img class="person-pic" src="images/people/jpg/abhinav.jpg" alt="Abhinav">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Abhinav</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Anirudh">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/anirudh.webp">
+                        <img class="person-pic" src="images/people/jpg/anirudh.jpg" alt="Anirudh">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Anirudh</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Devansh">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/devansh.webp">
+                        <img class="person-pic" src="images/people/jpg/devansh.jpg" alt="Devansh">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Devansh</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Joydeep">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/joydeep.webp">
+                        <img class="person-pic" src="images/people/jpg/joydeep.jpg" alt="Joydeep">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Joydeep</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Jyothish J">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/jyothish.webp">
+                        <img class="person-pic" src="images/people/jpg/jyothish.jpg" alt="Jyothish J">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Jyothish</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Mavani">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/mavani.webp">
+                        <img class="person-pic" src="images/people/jpg/mavani.jpg" alt="Mavani">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Mavani</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Nelson">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/nelson.webp">
+                        <img class="person-pic" src="images/people/jpg/nelson.jpg" alt="Nelson">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Nelson</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Nishant">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/nishant.webp">
+                        <img class="person-pic" src="images/people/jpg/nishant.jpg" alt="Nishant">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Nishant</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Nitesh">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/nitesh.webp">
+                        <img class="person-pic" src="images/people/jpg/nitesh.jpg" alt="Nitesh">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Nitesh</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Shriman">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/shriman.webp">
+                        <img class="person-pic" src="images/people/jpg/shriman.jpg" alt="Shriman">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Shriman</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Soumyadeep">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/soumyadeep.webp">
+                        <img class="person-pic" src="images/people/jpg/soumyadeep.jpg" alt="Soumyadeep">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Soumyadeep</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Sourav">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/sourav.webp">
+                        <img class="person-pic" src="images/people/jpg/sourav.jpg" alt="Sourav">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Sourav</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Tata">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/tata.webp">
+                        <img class="person-pic" src="images/people/jpg/tata.jpg" alt="Tata">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Tata</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Varun">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/varun.webp">
+                        <img class="person-pic" src="images/people/jpg/varun.jpg" alt="Varun">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Varun</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+                <span class="person">
+                    <picture title="Vivek">
+                        <source class="person-pic" type="image/webp" srcset="images/people/webp/vivek.webp">
+                        <img class="person-pic" src="images/people/jpg/vivek.jpg" alt="Vivek">
+                    </picture>
+                    <div class="overlay">
+                        <p class="person-name">Vivek</p>
+                        <div class="person-social-links">
+                            <a class="person-details mail" href="mailto:name@niser.ac.in" title="Mail" target="_blank"><i class="far fa-envelope"></i></a>
+                            <a class="person-details github" href="" title="Link to GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                            <a class="person-details fb" href="" title="Link to Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a class="person-details insta" href="" title="Link to Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <!-- Connect with us -->
+            <div id="connect-ws"></div> <!-- To make the nav-links/menu-links work -->
+            <div class="whitespan connect">Connect With Us</div>
+
+            <section  class="tiles" id="connect" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?phones" data-android-fix="true" data-ios-fix="true">
+                <div class="connect-desc">
+                    <!-- THE LOGO -->
+                    <a id="connect-logo-link" href="" title="RTC Homepage" target="_top">
+                        <picture>
+                            <source id="connect-logo" type="image/webp" srcset="images/logo.webp">
+                            <img id="connect-logo" src="images/logo.png">
+                        </picture>
+                    </a>
+                    <!-- THE TITLE -->
+                    <h1 id="connect-club-ttl">
+                            NISER RoboTech Club
+                    </h1>
+                    <!-- NISER ADDRESS -->
+                    <picture>
+                        <source id="connect-niser-logo" type="image/webp" srcset="images/niser-logo-light.webp">
+                        <img id="connect-niser-logo" src="images/niser-logo-light.png">
+                    </picture>
+                    <div class="connect-niser">
+                        <a href="http://www.niser.ac.in">National Institute of Science Education and Research<br></a>
+                        Bhubaneswar, India
+                    </div>
+                    <!-- MAIL, GITHUB, WHATSAPP, YT, FB, INSTA -->
+                    <div class="club-details-container">
+                        <a class="club-details mail" href="mailto:rtc@niser.ac.in" title="Mail Us" target="_blank"><i class="far fa-envelope"></i></a>
+                        <a class="club-details github" href="" title="Link to our GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="club-details whatsapp" href="tel:1234567890" title="WhatsApp Us" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="club-details yt" href="https://www.youtube.com/channel/UCDhZH_ndJbuxbzmKAyanrqQ" title="Link to our YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="club-details fb" href="" title="Link to our Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a class="club-details insta" href="" title="Link to our Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- GFORM LINK -->
+                </div>
+            </section>
+            <footer>
+                Powered by <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">Software Development Group</a>, NISER. All rights reserved.
+            </footer>
+        </div>
         <!-- Back to Top button -->
         <a href="#home" id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 

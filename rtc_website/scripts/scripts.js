@@ -21,26 +21,36 @@ $(document).on('click', 'a[href^="#"]', function(e) {
 });
 
 $(document).ready(function() {
-  var $toggleButton = $('.toggle-button'),
-      $menuWrap = $('.menu-sidebar');
+    var $toggleButton = $('.toggle-button'),
+    $menuWrap = $('.menu-sidebar');
 
-      if (document.documentElement.clientWidth > 1024) {
+    if (document.documentElement.clientWidth > 1024) {
         window.onscroll = function() {
-          if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-            document.getElementById("backToTop").style.display = "block"; // For backToTop
-            document.getElementById("toggle").style.display = "block"; // For Hamburger Menu
-          } else {  
-            document.getElementById("backToTop").style.display = "none"; // For backToTop
-            document.getElementById("toggle").style.display = "none"; // For Hamburger Menu
-          }
+            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                if ($toggleButton.hasClass('button-open') && $menuWrap.hasClass('menu-show')) {
+                    $toggleButton.removeClass('button-open');
+                    $menuWrap.removeClass('menu-show');
+                    if ($('.global-overlay').hasClass('dimmed')) {
+                        $('.global-overlay').removeClass('dimmed');
+                    }
+                }
+                document.getElementById("backToTop").style.display = "block"; // For backToTop
+                document.getElementById("toggle").style.display = "block"; // For Hamburger Menu
+                document.getElementById("menu").style.display = "block"; // For Hamburger Menu
+            } else {
+                document.getElementById("backToTop").style.display = "none"; // For backToTop
+                document.getElementById("toggle").style.display = "none"; // For Hamburger Menu
+                document.getElementById("menu").style.display = "none"; // For Hamburger Menu
+            }
         }
-      }
+    }
 
-  // For Hamburger Menu
-  $toggleButton.on('click', function() {
-      $(this).toggleClass('button-open');
-      $menuWrap.toggleClass('menu-show');
-  });
+    // For Hamburger Menu
+    $toggleButton.on('click', function() {
+        $(this).toggleClass('button-open');
+        $menuWrap.toggleClass('menu-show');
+        $('.global-overlay').toggleClass('dimmed');
+    });
 });
 
 // Parallax Fix for Android and iOS devices - DOESN'T WORK
