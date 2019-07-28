@@ -36,7 +36,12 @@
             </ul>     
         </div>
         <!-- THE LOGO -->
-        <a tabindex="0" id="logo-link" href="index.html" title="RTC Homepage" target="_top"><img id="logo" src="images/logo.webp"></a>
+        <a tabindex="0" id="logo-link" href="index.html" title="RTC Homepage" target="_top">
+            <picture>
+                <source id="logo" type="image/webp" srcset="images/logo.webp">
+                <img id="logo" src="images/logo.png">
+            </picture>
+        </a>
         <!-- HOME -->
         <section class="tiles" id="home" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?robots" data-android-fix="true" data-ios-fix="true">
             <!-- THE NAVBAR -->
@@ -56,14 +61,16 @@
         </section>
 
         <!-- ABOUT US -->
-        <div class="whitespan about-us" id="about-ws">About us</div>
+        <div id="about-ws"></div> <!-- To make the nav-links/menu-links work -->
+        <div class="whitespan about-us">About us</div>
 
         <section class="tiles" id="about" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?groups" data-android-fix="true" data-ios-fix="true">
             <p class="about-desc">We are the RoboTech Club of National Institute of Science Education and Research, Bhubaneswar. MORE TEXT HERE</p>
         </section>
 
         <!-- PROJECTS -->
-        <div class="whitespan projects" id="proj-ws">Discover our projects</div>
+        <div id="proj-ws"></div> <!-- To make the nav-links/menu-links work -->
+        <div class="whitespan projects">Our projects</div>
 
         <section class="tiles" id="proj" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?projects" data-android-fix="true" data-ios-fix="true">
             <div class="project proj-1">
@@ -148,11 +155,15 @@
         </section>
         
         <!-- The Team -->
-        <div class="whitespan team" id="team-ws"><i class="fas fa-chevron-left"></i>The Team/<i class="fas fa-chevron-right"></i></div>
+        <div id="team-ws"></div> <!-- To make the nav-links/menu-links work -->
+        <div class="whitespan team"><i class="fas fa-chevron-left"></i>The Team/<i class="fas fa-chevron-right"></i></div>
 
         <section class="tiles" id="team" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?team" data-android-fix="true" data-ios-fix="true">
             <span class="person">
-                <img class="person-pic" title="Manabputra" src="images/people/manab.webp">
+                <picture title="Manabputra">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/manab.webp">
+                    <img class="person-pic" src="images/people/jpg/manab.jpg" alt="Manabputra">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Manabputra</p>
                     <div class="person-social-links">
@@ -165,7 +176,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Abhinav" src="images/people/abhinav.webp">
+                <picture title="Abhinav">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/abhinav.webp">
+                    <img class="person-pic" src="images/people/jpg/abhinav.jpg" alt="Abhinav">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Abhinav</p>
                     <div class="person-social-links">
@@ -177,7 +191,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Anirudh" src="images/people/anirudh.webp">
+                <picture title="Anirudh">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/anirudh.webp">
+                    <img class="person-pic" src="images/people/jpg/anirudh.jpg" alt="Anirudh">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Anirudh</p>
                     <div class="person-social-links">
@@ -189,7 +206,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Devansh" src="images/people/devansh.webp">
+                <picture title="Devansh">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/devansh.webp">
+                    <img class="person-pic" src="images/people/jpg/devansh.jpg" alt="Devansh">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Devansh</p>
                     <div class="person-social-links">
@@ -201,7 +221,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Joydeep" src="images/people/joydeep.webp">
+                <picture title="Joydeep">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/joydeep.webp">
+                    <img class="person-pic" src="images/people/jpg/joydeep.jpg" alt="Joydeep">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Joydeep</p>
                     <div class="person-social-links">
@@ -213,7 +236,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Jyothish J" src="images/people/jyothish.webp">
+                <picture title="Jyothish J">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/jyothish.webp">
+                    <img class="person-pic" src="images/people/jpg/jyothish.jpg" alt="Jyothish J">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Jyothish</p>
                     <div class="person-social-links">
@@ -225,7 +251,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Mavani" src="images/people/mavani.webp">
+                <picture title="Mavani">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/mavani.webp">
+                    <img class="person-pic" src="images/people/jpg/mavani.jpg" alt="Mavani">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Mavani</p>
                     <div class="person-social-links">
@@ -237,7 +266,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Nelson" src="images/people/nelson.webp">
+                <picture title="Nelson">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/nelson.webp">
+                    <img class="person-pic" src="images/people/jpg/nelson.jpg" alt="Nelson">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Nelson</p>
                     <div class="person-social-links">
@@ -249,7 +281,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Nishant" src="images/people/nishant.webp">
+                <picture title="Nishant">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/nishant.webp">
+                    <img class="person-pic" src="images/people/jpg/nishant.jpg" alt="Nishant">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Nishant</p>
                     <div class="person-social-links">
@@ -261,7 +296,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Nitesh" src="images/people/nitesh.webp">
+                <picture title="Nitesh">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/nitesh.webp">
+                    <img class="person-pic" src="images/people/jpg/nitesh.jpg" alt="Nitesh">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Nitesh</p>
                     <div class="person-social-links">
@@ -273,7 +311,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Shriman" src="images/people/shriman.webp">
+                <picture title="Shriman">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/shriman.webp">
+                    <img class="person-pic" src="images/people/jpg/shriman.jpg" alt="Shriman">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Shriman</p>
                     <div class="person-social-links">
@@ -285,7 +326,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Soumyadeep" src="images/people/soumyadeep.webp">
+                <picture title="Soumyadeep">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/soumyadeep.webp">
+                    <img class="person-pic" src="images/people/jpg/soumyadeep.jpg" alt="Soumyadeep">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Soumyadeep</p>
                     <div class="person-social-links">
@@ -297,7 +341,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Sourav" src="images/people/sourav.webp">
+                <picture title="Sourav">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/sourav.webp">
+                    <img class="person-pic" src="images/people/jpg/sourav.jpg" alt="Sourav">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Sourav</p>
                     <div class="person-social-links">
@@ -309,7 +356,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Tata" src="images/people/tata.webp">
+                <picture title="Tata">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/tata.webp">
+                    <img class="person-pic" src="images/people/jpg/tata.jpg" alt="Tata">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Tata</p>
                     <div class="person-social-links">
@@ -321,7 +371,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Varun" src="images/people/varun.webp">
+                <picture title="Varun">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/varun.webp">
+                    <img class="person-pic" src="images/people/jpg/varun.jpg" alt="Varun">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Varun</p>
                     <div class="person-social-links">
@@ -333,7 +386,10 @@
                 </div>
             </span>
             <span class="person">
-                <img class="person-pic" title="Vivek" src="images/people/vivek.webp">
+                <picture title="Vivek">
+                    <source class="person-pic" type="image/webp" srcset="images/people/webp/vivek.webp">
+                    <img class="person-pic" src="images/people/jpg/vivek.jpg" alt="Vivek">
+                </picture>
                 <div class="overlay">
                     <p class="person-name">Vivek</p>
                     <div class="person-social-links">
@@ -347,18 +403,27 @@
         </section>
 
         <!-- Connect with us -->
-        <div class="whitespan connect" id="connect-ws">Connect With Us</div>
+        <div id="connect-ws"></div> <!-- To make the nav-links/menu-links work -->
+        <div class="whitespan connect">Connect With Us</div>
 
         <section  class="tiles" id="connect" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?phones" data-android-fix="true" data-ios-fix="true">
             <div class="connect-desc">
                 <!-- THE LOGO -->
-                <a id="connect-logo-link" href="" title="RTC Homepage" target="_top"><img id="connect-logo" src="images/logo.webp"></a>
+                <a id="connect-logo-link" href="" title="RTC Homepage" target="_top">
+                    <picture>
+                        <source id="connect-logo" type="image/webp" srcset="images/logo.webp">
+                        <img id="connect-logo" src="images/logo.png">
+                    </picture>
+                </a>
                 <!-- THE TITLE -->
                 <h1 id="connect-club-ttl">
                         NISER RoboTech Club
                 </h1>
                 <!-- NISER ADDRESS -->
-                <img id="connect-niser-logo" src="images/niser-logo-light.webp">
+                <picture>
+                    <source id="connect-niser-logo" type="image/webp" srcset="images/niser-logo-light.webp">
+                    <img id="connect-niser-logo" src="images/niser-logo-light.png">
+                </picture>
                 <div class="connect-niser">
                     <a href="http://www.niser.ac.in">National Institute of Science Education and Research<br></a>
                     Bhubaneswar, India

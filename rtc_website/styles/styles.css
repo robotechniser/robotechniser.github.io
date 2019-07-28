@@ -47,7 +47,7 @@
     --proj-desc-bg-col: rgba(41, 118, 148, 0.75);
 
     --person-name-font-size: 2.25rem;
-    --person-width: 32em;
+    --person-width: 32rem;
     --person-height: 38rem;
     --person-dsgn-font-size: 1.75rem;
 
@@ -75,16 +75,6 @@ body
 
     -webkit-overflow-scrolling: touch;
 }
-
-/* .parallax-mirror {
-    width: 100vw !important;
-    left: -50% !important;
-    right: 50% !important;
-}
-
-.parallax-mirror img {
-    width: 100vw !important;
-} */
 
 a:hover, a:link, a:active, a:any-link, a:visited
 {
@@ -368,7 +358,7 @@ ul {
 #ttl
 { 
     position: relative;
-    top: 30%;
+    top: 35%;
 
     z-index: 0;
 
@@ -381,7 +371,7 @@ ul {
 .down-arrow {
     display: block;
     position: relative;
-    top: 70vh;
+    top: 75vh;
 
     color: var(--down-arrow-color);
 
@@ -544,6 +534,10 @@ footer
     box-shadow: 0 0 2rem 0 rgba(0,0,0,0.85);
 }
 
+picture {
+    width: 100%;
+}
+
 .person-pic
 {
     width: 100%;
@@ -695,6 +689,7 @@ footer
     display: none;
     position: fixed;
     bottom: 8rem;
+    /* top: 87rem; */
     right: 4rem;
 
     width: 6rem;
@@ -716,7 +711,7 @@ footer
 
     border-radius: 50%;
     cursor: pointer;
-    z-index: 99;
+    z-index: 100;
 }
 
 #backToTop:hover {
@@ -728,17 +723,31 @@ footer
 {
     
 }
-
-@media screen and (min-width: 960px) and (max-width: 1024px)
+/* For Medium size laptops and iPad Pro (10.5"+) */
+@media screen and (min-width: 960px) and (max-width: 1124px)
 {
+    /* Header */
+    #ttl
+    { 
+        position: relative;
+        top: 43%;
+    }
+    /* Chevron - Down arrow */
+    .down-arrow {
+        position: relative;
+        top: 85vh;
+    }
     /* HAM MENU */
     .toggle-button {
         display: block !important;
     }
     /* Nav */
-    .ulist {
+    #nav {
         display: none;
     }
+    /* #nav {
+        padding: 0;
+    } */
     .nav-links {
         display: block;
         float: none;
@@ -746,7 +755,7 @@ footer
     /* Projects */
     #proj
     {
-        grid-template-columns: 12fr;
+        grid-template-columns: 6fr 6fr;
 
         text-align: center;
 
@@ -785,11 +794,25 @@ footer
         --proj-ttl-font-size: 3rem;
         --proj-desc-font-size: 1.8rem;
 
+        --person-width: 26rem;
+        --person-height: 32rem;
+
         --connect-height: 90vh;
         --connect-logo-width: 8rem;
         --connect-club-ttl-font-size: 4rem;
         --connect-niser-logo-width: 14rem;
         --club-details-font-size: 6rem;
+    }
+    /* Header */
+    #ttl
+    { 
+        position: relative;
+        top: 46%;
+    }
+    /* Chevron - Down arrow */
+    .down-arrow {
+        position: relative;
+        top: 80vh;
     }
     /* HAM MENU */
     .toggle-button {
@@ -803,19 +826,16 @@ footer
         padding: 1.5rem 0;
     }
     /* Nav */
-    /* Nav */
-    .ulist {
+    #nav {
         display: none;
     }
+    /* #nav {
+        padding: 0;
+    } */
     .nav-links {
         display: block;
         float: none;
-    }
-    /* Chevron - Down-arrow */
-    .down-arrow {
-        position: relative;
-        top: 68vh;
-    }
+    }  
     /* Projects */
     #proj
     {
@@ -836,7 +856,7 @@ footer
         padding: 2rem;
     }
     .person {
-        margin: 1.5rem;
+        margin: 3rem;
     }
     /* Connect/About */
     .club-details {
@@ -847,5 +867,29 @@ footer
     footer
     {
         padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 601px)
+{
+    /* Chevron - Down arrow */
+    .down-arrow {
+        position: relative;
+        top: 80vh;
+    }
+}
+/* For phones (tall) */
+@media screen and (max-height: 880px)
+{
+    /* Header */
+    #ttl
+    { 
+        position: relative;
+        top: 34%;
+    }
+    /* Chevron - Down arrow */
+    .down-arrow {
+        position: relative;
+        top: 58%;
     }
 }
