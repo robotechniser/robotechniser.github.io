@@ -503,11 +503,6 @@ footer
 /* THE TEAM */
 #team
 {
-    /* display: -moz-grid;
-    display: -ms-grid;
-    display: grid; */
-    /* grid-template-columns: repeat(4, 3fr); */
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -534,18 +529,12 @@ footer
     box-shadow: 0 0 2rem 0 rgba(0,0,0,0.85);
 }
 
-picture {
-    width: 100%;
-}
-
 .person-pic
 {
     width: 100%;
     height: 100%;
 
     text-align: center;
-
-    border: 0.2rem solid white;
 }
 
 .overlay
@@ -577,8 +566,7 @@ picture {
 
 .person-name
 {
-    margin: 1rem 0;
-    margin-bottom: 0;
+    margin: 0.5rem 0 -0.5rem 0;
 
     color: rgb(13, 113, 228);
     
@@ -719,10 +707,6 @@ picture {
 }
 
 /* For Responsiveness: Media Rules */
-@media screen and (min-width: 1024px)
-{
-    
-}
 /* For Medium size laptops and iPad Pro (10.5"+) */
 @media screen and (min-width: 960px) and (max-width: 1124px)
 {
@@ -772,7 +756,7 @@ picture {
         padding: 2.5rem;
     }
     .person {
-        margin: 5rem;
+        margin: 5rem 7rem;
     }
 }
 
@@ -856,7 +840,17 @@ picture {
         padding: 2rem;
     }
     .person {
-        margin: 3rem;
+        margin: 5rem;
+    }
+    ..person-name {
+        margin: 1rem 0 0 0;
+    }
+    .person-social-links {
+        margin: 0.75rem;
+    }
+    .person-details {
+        font-size: 3rem;
+        /* margin: 1rem; */
     }
     /* Connect/About */
     .club-details {
