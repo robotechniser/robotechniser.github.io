@@ -24,16 +24,19 @@ $(document).ready(function() {
   var $toggleButton = $('.toggle-button'),
       $menuWrap = $('.menu-sidebar');
 
-  window.onscroll = function() {
-    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-      document.getElementById("backToTop").style.display = "block";
-      document.getElementById("toggle").style.display = "block";
-    } else {  
-      document.getElementById("backToTop").style.display = "none";
-      document.getElementById("toggle").style.display = "none";
-    }
-  }
+      if (document.documentElement.clientWidth > 1024) {
+        window.onscroll = function() {
+          if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+            document.getElementById("backToTop").style.display = "block"; // For backToTop
+            document.getElementById("toggle").style.display = "block"; // For Hamburger Menu
+          } else {  
+            document.getElementById("backToTop").style.display = "none"; // For backToTop
+            document.getElementById("toggle").style.display = "none"; // For Hamburger Menu
+          }
+        }
+      }
 
+  // For Hamburger Menu
   $toggleButton.on('click', function() {
       $(this).toggleClass('button-open');
       $menuWrap.toggleClass('menu-show');

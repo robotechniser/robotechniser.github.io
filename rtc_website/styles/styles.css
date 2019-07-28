@@ -10,12 +10,13 @@
 {
     font: 10px Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    --logo-width: 10rem;
+    --logo-width: 7rem;
 
     --intro-ttl-font-size: 8rem;
     --intro-ttl-col: rgb(233, 224, 207);
 
-    --menu-sidebar-bg-col: rgba(41, 118, 148, 0.75);
+    --menu-sidebar-bg-col: rgba(30, 93, 136, 0.75);
+     /* rgba(41, 118, 148, 0.75); */
 
     --nav-link-font-size: 2.2rem;
     --nav-link-col: yellow;
@@ -142,7 +143,7 @@ ul {
 
     position: fixed;
     top: 3rem;
-    right: 6rem;
+    right: 8.6rem;
 
     width: 4.5rem;
     height: 4rem;
@@ -152,41 +153,49 @@ ul {
     transition: .25s;
     z-index: 100;
 }
+
 .toggle-button:hover {
     cursor: pointer;
 }
+
 .toggle-button .menu-bar {
     position: absolute;
     border-radius: 2px;
     width: 80%;
     transition: .5s;
 }
+
 .toggle-button .menu-bar-top {
-    border: 4px solid white;
+    border: 4px solid rgb(51, 51, 51);
     border-bottom: none;
     top: 0;
 }
+
 .toggle-button .menu-bar-middle {
     height: 4px;
-    background-color: white;
+    background-color: rgb(51, 51, 51);
     margin-top: 7px;
     margin-bottom: 7px;
     top: 4px;
 }
+
 .toggle-button .menu-bar-bottom {
-    border: 4px solid white;
+    border: 4px solid rgb(51, 51, 51);
     border-top: none;
     top: 22px;
 }
+
 .button-open .menu-bar-top {
     transform: rotate(45deg) translate(8px, 8px);
     transition: .5s;
 }
+
 .button-open .menu-bar-middle {
-    transform: translate(230px);
+    transform: translate(-22rem);
     transition: .1s ease-in;
     opacity: 0;
 }
+
 .button-open .menu-bar-bottom {
     transform: rotate(-45deg) translate(8px, -7px);
     transition: .5s;
@@ -203,8 +212,8 @@ ul {
     right: 0;
     
     height: 100%;
-    width: 30rem;
-    margin-right: -30rem;
+    width: 22rem;
+    margin-right: -22rem;
 
     overflow: auto;
     
@@ -226,15 +235,14 @@ ul {
 .menu-links
 {
     position: relative;
-    top: 10rem;
+    top: 28vh;
 
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
 
     font-family: 'Courier New', Courier, monospace;
     font-size: 2.5rem; /* VAR */
+    font-weight: 600;
     color: var(--nav-link-col);
-
-    margin: 4rem; /* VAR */
 }
 
 /* .menu-sidebar li > a:after {
@@ -283,7 +291,12 @@ ul {
 /* LOGO Image */
 #logo-link
 {
-    margin-left: 6vw;
+    position: fixed;
+    top: 1rem;
+
+    z-index: 99;
+
+    margin-left: 4vw;
     float: left;
 }
 
@@ -307,7 +320,7 @@ ul {
 
 #nav
 {
-    padding: 2rem;
+    padding: 1rem;
 
     background: inherit;
 
@@ -322,7 +335,7 @@ ul {
     float: left;
 
     position: relative;
-    left: 18%;
+    left: 30%;
 
     font-family: 'Courier New', Courier, monospace;
     font-size: var(--nav-link-font-size);
@@ -374,7 +387,7 @@ ul {
 
     font-size: var(--down-arrow-size);
 
-    z-index: 99;
+    z-index: 9;
 }
 
 .down-arrow a {
@@ -718,9 +731,13 @@ footer
 
 @media screen and (min-width: 960px) and (max-width: 1024px)
 {
+    /* HAM MENU */
+    .toggle-button {
+        display: block !important;
+    }
     /* Nav */
     .ulist {
-        display: inline-block;
+        display: none;
     }
     .nav-links {
         display: block;
@@ -753,7 +770,7 @@ footer
 @media screen and (max-width: 960px)
 {
     :root {
-        --logo-width: 8rem;
+        --logo-width: 4rem;
 
         --intro-ttl-font-size: 6rem;
 
@@ -763,7 +780,7 @@ footer
         --down-arrow-size: 3.5rem;
 
         --whitespan-height: 6rem;
-        --whitespan-text-font-size: 3.5rem;
+        --whitespan-text-font-size: 2.5rem;
 
         --proj-ttl-font-size: 3rem;
         --proj-desc-font-size: 1.8rem;
@@ -774,13 +791,21 @@ footer
         --connect-niser-logo-width: 14rem;
         --club-details-font-size: 6rem;
     }
+    /* HAM MENU */
+    .toggle-button {
+        display: block !important;
+        position: fixed;
+        top: 1.7rem;
+        right: 3rem;
+    }
     /* Whitespan */
     .whitespan {
-        padding: 1rem 0;
+        padding: 1.5rem 0;
     }
     /* Nav */
+    /* Nav */
     .ulist {
-        display: inline-block;
+        display: none;
     }
     .nav-links {
         display: block;
