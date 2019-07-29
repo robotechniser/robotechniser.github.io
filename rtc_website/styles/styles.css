@@ -299,10 +299,15 @@ ul {
 
 .menu-sidebar li > a:before {
     top: 0;
+    right: 50%;
 }
 
 .menu-sidebar li > a:hover:after, .menu-sidebar li > a:hover:before, .nav-links:hover:after {
     background-position: -100% 0;
+}
+
+.menu-sidebar li > a:hover:before {
+    background-position: 100% 0;
 }
 
 /* For all the tiles -- Individual tiles can be styled, well, individually */
@@ -336,7 +341,7 @@ ul {
     position: fixed;
     top: 1rem;
 
-    z-index: 10;
+    z-index: 15;
 
     margin-left: 4vw;
     float: left;
@@ -818,7 +823,7 @@ footer
         --nav-link-font-size: 2rem;
         --nav-link-margin: 2vw;
 
-        --down-arrow-size: 3.5rem;
+        --down-arrow-size: 4.5rem;
 
         --whitespan-height: 6rem;
         --whitespan-text-font-size: 2.5rem;
@@ -844,7 +849,7 @@ footer
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 80vh;
+        top: 82vh;
     }
     /* HAM MENU */
     .toggle-button {
