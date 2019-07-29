@@ -82,12 +82,15 @@ body
 }
 
 .dimmed {
-    -webkit-backdrop-filter: blur(1rem);
+    /* -webkit-backdrop-filter intentionally not used, as iOS Safari messes up */
     backdrop-filter: blur(1rem);
 
-    -ms-filter: opacity(0.9) contrast(40%);
-    -webkit-filter: opacity(0.9) contrast(40%);
-    filter: opacity(0.9) contrast(40%);
+    -ms-filter: opacity(0.9)
+                contrast(40%);
+    -webkit-filter: opacity(0.9)
+                    contrast(40%);
+    filter: opacity(0.9)
+            contrast(40%);
 }
 
 a:hover, a:link, a:active, a:any-link, a:visited
@@ -155,7 +158,7 @@ ul {
     padding: 0.5rem;
 
     transition: .25s;
-    z-index: 100;
+    z-index: 15;
 }
 
 .toggle-button:hover {
@@ -243,7 +246,7 @@ ul {
 
     overflow: auto;
     
-    z-index: 99;
+    z-index: 10;
 
     text-align: center;
     line-height: 8rem;
@@ -262,6 +265,7 @@ ul {
 
 .menu-links
 {
+    padding: 2rem;
     position: relative;
     top: 28vh;
 
@@ -269,9 +273,17 @@ ul {
     font-size: 2.5rem; /* VAR */
     font-weight: 600;
     color: var(--nav-link-col);
+
+    -ms-filter: brightness(80%);
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
 }
 
-.menu-sidebar li > a:after, .nav-links:after {
+.menu-links:hover {
+    filter: brightness(120%);
+}
+
+.menu-sidebar li > a:after, .menu-sidebar li > a:before, .nav-links:after {
     content: "";
     display: block;
     height: 0.3rem;
@@ -285,7 +297,11 @@ ul {
     background-size: 200% auto;
 }
 
-.menu-sidebar li > a:hover:after, .nav-links:hover:after {
+.menu-sidebar li > a:before {
+    top: 0;
+}
+
+.menu-sidebar li > a:hover:after, .menu-sidebar li > a:hover:before, .nav-links:hover:after {
     background-position: -100% 0;
 }
 
@@ -301,7 +317,7 @@ ul {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 5;
     width: 100%;
     height: var(--whitespan-height);
     font-size: var(--whitespan-text-font-size);
@@ -320,7 +336,7 @@ ul {
     position: fixed;
     top: 1rem;
 
-    z-index: 99;
+    z-index: 10;
 
     margin-left: 4vw;
     float: left;
@@ -352,7 +368,7 @@ ul {
 
     text-align: center;
 
-    z-index: 10;
+    z-index: 5;
 }
 
 .nav-links
@@ -413,7 +429,7 @@ ul {
 
     font-size: var(--down-arrow-size);
 
-    z-index: 9;
+    z-index: 10;
 }
 
 .down-arrow a {
@@ -731,7 +747,7 @@ footer
 
     border-radius: 50%;
     cursor: pointer;
-    z-index: 100;
+    z-index: 15;
 }
 
 #backToTop:hover {
@@ -823,7 +839,7 @@ footer
     #ttl
     { 
         position: relative;
-        top: 46%;
+        top: 43%;
     }
     /* Chevron - Down arrow */
     .down-arrow {
