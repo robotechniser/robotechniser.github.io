@@ -466,7 +466,7 @@ footer
 
 /* ABOUT */
 #about {
-    padding: 5vw 6vw;
+    padding: 4rem;
 }
 
 .about-desc {
@@ -872,7 +872,11 @@ footer
     .nav-links {
         display: block;
         float: none;
-    }  
+    }
+    /* About Us */
+    #about {
+        padding: 2rem;
+    }
     /* Projects */
     #proj
     {
@@ -915,6 +919,9 @@ footer
     {
         padding: 1rem;
     }
+    #backToTop {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 601px)
@@ -938,5 +945,8 @@ footer
     .down-arrow {
         position: relative;
         top: 58%;
+    }
+    #backToTop {
+        display: none !important;
     }
 }
