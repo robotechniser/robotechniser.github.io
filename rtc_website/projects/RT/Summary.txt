@@ -1,8 +1,0 @@
-It is a combined project with NISER Astronomy Club. It consists of a basic setup that can detect radio waves coming from target cellestial body with a maximum frequency of 22K hertz. Its main component is a satellite dish and a satellite finder used to measure intensity of waves falling on it. Right now we can detect sun with a intensity of about 8 decibels.
-
-FUTURE PROSPECTS:
-
-In future, we plan to use a more advanced satellite finder with more sensitivity and larger frequency range.
-We also plan to get a bigger dish to collect more data and possibly detect Juipiter and moon. The data obtained can be analysed using various softwares like Radio Sky Map and can be used for practical purposes, like calculating surface temperature of sun.
-
-IMAGE CITATION: http://www.stargazing.net/david/radio/itty_bitty_radio_telescope.html

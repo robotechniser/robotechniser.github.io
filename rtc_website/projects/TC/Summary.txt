@@ -1,8 +1,0 @@
-We've made a miniature tesla coil(slayer exciter circuit) with a secondary coil of 400 turns that can output 1200 volts. It can be used to light up flourocent bulbs in close proximity and can transmit wirless electricity (around 5 volts) to small circuits too.
-
-FUTURE PROSPECTS:
-
-In future we plan to make a bigger version of this circuit with more turns in secondary coil (possibly 1000 turns) and  with a new circuit that can handle more power with power MOSFET drivers, we can output more than 5000 volts and can get decent visible arcs.
-          With this new tesla coil, we can understand wireless power transmission in a more illustrative way. Seeing a CFL light up wirelessly, makes it an attractive  project and people will surely be interested to know the science behind it.
-
-IMAGE(S) CITATION: https://www.electroboom.com/?p=521

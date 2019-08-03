@@ -10,6 +10,8 @@
 {
     font: 10px Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+    --page-links-col: rgba(0, 250, 154, 0.8);
+    
     --logo-width: 7rem;
 
     --intro-ttl-font-size: 8rem;
@@ -38,8 +40,9 @@
     --proj-ttl-col: white;
     --proj-ttl-font-size: 4rem;
 
-    --proj-img-width: 25rem;
-    --proj-img-height: 30rem;
+    --proj-img-width: 30rem;
+    --proj-img-height: 32rem;
+    --proj-img-wide-width: 38rem;
 
     --proj-desc-col: white;
     --proj-desc-font-size: 2rem;
@@ -96,6 +99,10 @@ body
 a:hover, a:link, a:active, a:any-link, a:visited
 {
     text-decoration: none !important;
+}
+
+.page-links {
+    color: var(--page-links-col);
 }
 
 ul {
@@ -327,7 +334,7 @@ ul {
     height: var(--whitespan-height);
     font-size: var(--whitespan-text-font-size);
     font-weight: 900;
-    font-family: 'Russo One'; /* Inconsolata */
+    font-family: 'Russo One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 
     background: var(--whitespan-bg-col);
@@ -420,7 +427,7 @@ ul {
     z-index: 0;
 
     color: var(--intro-ttl-col);
-    font-family: Aleo;
+    font-family: Aleo, 'Courier New', Courier, monospace;;
     font-size: var(--intro-ttl-font-size);
     font-weight: 500;
 }
@@ -505,6 +512,7 @@ footer
     height: auto;
 
     margin: 2rem;
+    padding: 1rem;
 
     background: var(--proj-desc-bg-col);
 
@@ -522,7 +530,7 @@ footer
     margin: 2rem;
 
     color: var(--proj-ttl-col);
-    font-family: Aleo;
+    font-family: Aleo, 'Courier New', Courier, monospace;;
     font-size: var(--proj-ttl-font-size);
     font-weight: 500;
 }
@@ -546,13 +554,17 @@ footer
     margin: 1rem 3rem;
 }
 
+.proj-img-wide {
+    width: var(--proj-img-wide-width);
+}
+
 .proj-desc {
     margin: 4rem;
 
     text-align: justify;
 
     color: var(--proj-desc-col);
-    font-family: Aleo;
+    font-family: Montserrat, sans-serif;
     font-size: var(--proj-desc-font-size);
     font-weight: 500;
 }
@@ -627,7 +639,7 @@ footer
 
     color: rgb(13, 113, 228);
     
-	font-family: Aleo;
+	font-family: Aleo, 'Courier New', Courier, monospace;
 	font-weight: 600;
     font-size: var(--person-name-font-size);
 }
@@ -637,7 +649,7 @@ footer
 
     color: rgb(13, 113, 228);
     
-	font-family: Aleo;
+	font-family: Aleo, 'Courier New', Courier, monospace;
 	font-weight: 600;
     font-size: var(--person-dsgn-font-size);
 }
@@ -675,7 +687,7 @@ footer
 
 #connect-club-ttl {
     color: var(--intro-ttl-col);
-    font-family: Aleo;
+    font-family: Aleo, 'Courier New', Courier, monospace;;
     font-size: var(--connect-club-ttl-font-size);
     font-weight: 500;
 }
@@ -684,7 +696,7 @@ footer
     margin: 3vh 0;
 
     font-size: 3rem;
-    font-family: Inconsolata;
+    font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
 
