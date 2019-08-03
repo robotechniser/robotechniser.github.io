@@ -730,6 +730,14 @@ footer
     margin: 1rem 0;
 }
 
+#niser-link {
+    color: white !important;
+}
+
+#niser-link:hover {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
 .club-details-container {
     display: flex;
     flex-direction: row;
