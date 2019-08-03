@@ -60,6 +60,8 @@
     --connect-niser-logo-width: 16rem;
     --connect-desc-bg-col: rgba(41, 118, 148, 0.75);
     --club-details-font-size: 7rem;
+    --gform-img-width: 7rem;
+    --gform-span-font-size: 3rem;
 
     --footer-text-col: rgb(221, 203, 200);
     --footer-bg-col: rgb(194, 171, 95);
@@ -730,6 +732,32 @@ footer
     margin: 1rem 0;
 }
 
+#gform-span {
+    padding: 5rem 0 2rem 0;
+
+    color: palegoldenrod;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: var(--gform-span-font-size);
+}
+
+#gform-img {
+    margin: -2.5rem 2rem;
+    width: var(--gform-img-width);
+
+    -o-transition: 0.25s ease;
+    -moz-transition: 0.25s ease;
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease;
+}
+
+#gform-img:hover {
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 #niser-link {
     color: white !important;
 }
@@ -863,6 +891,8 @@ footer
         --connect-club-ttl-font-size: 4rem;
         --connect-niser-logo-width: 14rem;
         --club-details-font-size: 6rem;
+        --gform-span-font-size: 2.25rem;
+        --gform-img-width: 5rem;
     }
     /* Header */
     #ttl
@@ -943,6 +973,10 @@ footer
     .club-details {
         margin: 0 1.75rem;
         line-height: 10rem;
+    }
+    /* GForm Link */
+    #gform-img {
+        margin: -1.5rem 1rem;
     }
     /* Footer */
     footer
