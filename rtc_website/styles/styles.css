@@ -630,12 +630,12 @@ footer
 }
 
 .person:hover .overlay {
-    height: 30%;
+    height: 32%;
 }
 
 .person-name
 {
-    margin: 0.5rem 0 -0.5rem 0;
+    margin: 0.75rem 0 -0.75rem 0;
 
     color: rgb(13, 113, 228);
     
@@ -645,7 +645,7 @@ footer
 }
 
 .person-dsgn {
-    /* margin-bottom: 0.3rem; */
+    margin: 1rem;
 
     color: rgb(13, 113, 228);
     
@@ -656,6 +656,10 @@ footer
 
 .person-social-links {
     margin: 1rem;
+}
+
+.person-wo-dsgn {
+    margin: 2rem;
 }
 
 .person-details {
@@ -794,9 +798,6 @@ footer
     #nav {
         display: none;
     }
-    /* #nav {
-        padding: 0;
-    } */
     .nav-links {
         display: block;
         float: none;
@@ -822,6 +823,9 @@ footer
     }
     .person {
         margin: 5rem 7rem;
+    }
+    .person-dsgn {
+        margin: 0;
     }
 }
 
@@ -914,8 +918,14 @@ footer
     .person-name {
         margin: 1rem 0 0 0;
     }
+    .person-dsgn {
+        margin: 0;
+    }
     .person-social-links {
         margin: 0.75rem;
+    }
+    .person-wo-dsgn {
+        margin: 1rem;
     }
     .person-details {
         font-size: 3rem;
