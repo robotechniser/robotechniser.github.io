@@ -736,7 +736,7 @@ footer
     padding: 5rem 0 2rem 0;
 
     color: palegoldenrod;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Montserrat;
     font-size: var(--gform-span-font-size);
 }
 
@@ -903,7 +903,7 @@ footer
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 82vh;
+        top: 80vh;
     }
     /* HAM MENU */
     .toggle-button {
@@ -993,7 +993,7 @@ footer
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 80vh;
+        top: 78vh;
     }
 }
 /* For phones (tall) */
@@ -1008,7 +1008,7 @@ footer
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 58%;
+        top: 56%;
     }
     #backToTop {
         display: none !important;
