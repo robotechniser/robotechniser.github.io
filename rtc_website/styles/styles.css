@@ -194,6 +194,8 @@ ul {
     margin-top: 7px;
     margin-bottom: 7px;
     top: 4px;
+
+    z-index: 20;
 }
 
 .toggle-button .menu-bar-bottom {
@@ -420,6 +422,10 @@ ul {
 }
 
 /* HOME */
+/* #home {
+    background: white url(https://source.unsplash.com/random/?walle) center/cover no-repeat fixed;
+} */
+
 /* THE TITLE */
 #ttl
 { 
@@ -476,6 +482,8 @@ footer
 /* ABOUT */
 #about {
     padding: 4rem;
+
+    /* background: white url(https://source.unsplash.com/random/?astronaut) center/cover no-repeat fixed; */
 }
 
 .about-desc {
@@ -504,6 +512,8 @@ footer
 
     grid-template-columns: repeat(2, 6fr);
     grid-column-gap: 2rem;
+
+    /* background: white url(https://source.unsplash.com/random/?robots) center/cover no-repeat fixed; */
 
     padding: 4rem;
     height: auto;
@@ -581,8 +591,9 @@ footer
     align-content: middle;
     justify-content: center;
 
+    /* background: white url(https://source.unsplash.com/random/?legoland) center/cover no-repeat fixed; */
+
     padding: 4rem;
-    /* padding-bottom: 6rem; */
 
     height: auto;
 }
@@ -672,6 +683,8 @@ footer
 #connect {
     height: auto;
     padding: 3vw;
+
+    /* background: white url(https://source.unsplash.com/random/?asimo) center/cover no-repeat fixed; */
 }
     
 .connect-desc {
@@ -743,6 +756,12 @@ footer
 #gform-img {
     margin: -2.5rem 2rem;
     width: var(--gform-img-width);
+
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 0 3rem 0 rgb(39, 59, 122);
+    -moz-box-shadow: 0 0 3rem 0 rgb(39, 59, 122);
+    box-shadow: 0 0 3rem 0 rgb(39, 59, 122);
 
     -o-transition: 0.25s ease;
     -moz-transition: 0.25s ease;
@@ -996,6 +1015,15 @@ footer
         top: 78vh;
     }
 }
+
+@media screen and (max-width: 398px)
+{
+    /* GForm Link */
+    #gform-img {
+        margin: 1.5rem 1rem -1.75rem 1rem;
+    }
+}
+
 /* For phones (tall) */
 @media screen and (max-height: 880px)
 {
