@@ -996,6 +996,64 @@ blockquote span a:hover {
 
 /* For Responsiveness: Media Rules */
 /* For Medium size laptops and iPad Pro (10.5"+) */
+@media screen and (min-width: 960px) and (max-width: 1875px)
+{
+    .proj-details div:first-of-type {
+        opacity: 0.5;
+
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        -webkit-transition: 0.25s;
+        transition: 0.25s;
+
+    }
+    .proj-details div:first-of-type:hover {
+        opacity: 1;
+
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    .proj-img-container:hover {
+        opacity: 1;
+        z-index: 30;
+
+        -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+        -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+        box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        -webkit-transition: 0.25s;
+        transition: 0.25s;
+    }
+    .proj-img-container-lower {
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+
+        -moz-transform: scale(1.05) translateY(-75%);
+        -ms-transform: scale(1.05) translateY(-75%);
+        -o-transform: scale(1.05) translateY(-75%);
+        -webkit-transform: scale(1.05) translateY(-75%);
+        transform: scale(1.05) translateY(-75%);
+
+        width: 32rem;
+        margin-bottom: -28%;
+    }
+    .proj-img-container-lower img {
+        width: 34rem;
+    }
+    .single-img {
+        opacity: 1 !important;
+    }
+    .proj-desc {
+        margin-top: 0;
+    }
+}
 @media screen and (min-width: 960px) and (max-width: 1124px)
 {
     :root {
@@ -1043,6 +1101,9 @@ blockquote span a:hover {
     .proj-img-container {
         margin: 2rem;
     }
+    .proj-img-container-lower {
+        margin-bottom: -48%;
+    }
     .proj-desc {
         margin: 4rem;
     }
@@ -1057,7 +1118,61 @@ blockquote span a:hover {
         margin: 0;
     }
 }
+@media screen and (max-width: 902px)
+{
+    .proj-details div:first-of-type {
+        opacity: 0.5;
 
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        -webkit-transition: 0.25s;
+        transition: 0.25s;
+
+    }
+    .proj-details div:first-of-type:hover {
+        opacity: 1;
+
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    .proj-img-container:hover {
+        opacity: 1;
+        z-index: 30;
+
+        -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+        -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+        box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        -webkit-transition: 0.25s;
+        transition: 0.25s;
+    }
+    .proj-img-container-lower {
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+
+        -moz-transform: scale(1.05) translateY(-75%);
+        -ms-transform: scale(1.05) translateY(-75%);
+        -o-transform: scale(1.05) translateY(-75%);
+        -webkit-transform: scale(1.05) translateY(-75%);
+        transform: scale(1.05) translateY(-75%);
+
+        width: 32rem;
+        margin-bottom: -25%;
+    }
+    .proj-img-container-lower img {
+        width: 34rem;
+    }
+    .single-img {
+        opacity: 1 !important;
+    }
+}
 @media screen and (max-width: 960px)
 {
     :root {
@@ -1148,6 +1263,9 @@ blockquote span a:hover {
     .proj-desc {
         margin: 2rem 2.25rem;
     }
+    .proj-img-container-lower {
+        margin-bottom: -30%;
+    }
     /* Team */
     #team {
         padding: 2rem;
@@ -1197,57 +1315,9 @@ blockquote span a:hover {
     .project {
         margin: 1rem;
     }
-    .proj-details div:first-of-type {
-        opacity: 0.5;
-
-        -moz-transition: 0.25s;
-        -o-transition: 0.25s;
-        -webkit-transition: 0.25s;
-        transition: 0.25s;
-
-    }
-    .proj-details div:first-of-type:hover {
-        opacity: 1;
-
-        -moz-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        -o-transform: scale(1.05);
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-    }
-    .proj-img-container {
-        margin: 1rem;
-    }
-    .proj-img-container:hover {
-        opacity: 1;
-        z-index: 30;
-
-        -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-        -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-        box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-
-        -moz-transition: 0.25s;
-        -o-transition: 0.25s;
-        -webkit-transition: 0.25s;
-        transition: 0.25s;
-    }
     .proj-img-container-lower {
-        -moz-transition: 0.4s;
-        -o-transition: 0.4s;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-
-        -moz-transform: scale(1.05) translateY(-75%);
-        -ms-transform: scale(1.05) translateY(-75%);
-        -o-transform: scale(1.05) translateY(-75%);
-        -webkit-transform: scale(1.05) translateY(-75%);
-        transform: scale(1.05) translateY(-75%);
-
         width: 32rem;
-        margin-bottom: -40%;
-    }
-    .proj-img-container-lower img {
-        width: 34rem;
+        margin-bottom: -50%;
     }
     :root {
         --about-desc-font-size: 1.8rem;
