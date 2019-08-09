@@ -668,7 +668,7 @@ blockquote span a:hover {
     height: auto;
 
     margin: 2rem;
-    padding: 1rem;
+    padding: 2rem;
 
     background: var(--proj-desc-bg-col);
 
@@ -1197,8 +1197,57 @@ blockquote span a:hover {
     .project {
         margin: 1rem;
     }
+    .proj-details div:first-of-type {
+        opacity: 0.5;
+
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        -webkit-transition: 0.25s;
+        transition: 0.25s;
+
+    }
+    .proj-details div:first-of-type:hover {
+        opacity: 1;
+
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
     .proj-img-container {
         margin: 1rem;
+    }
+    .proj-img-container:hover {
+        opacity: 1;
+        z-index: 30;
+
+        -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+        -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+        box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+
+        -moz-transition: 0.25s;
+        -o-transition: 0.25s;
+        -webkit-transition: 0.25s;
+        transition: 0.25s;
+    }
+    .proj-img-container-lower {
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+
+        -moz-transform: scale(1.05) translateY(-75%);
+        -ms-transform: scale(1.05) translateY(-75%);
+        -o-transform: scale(1.05) translateY(-75%);
+        -webkit-transform: scale(1.05) translateY(-75%);
+        transform: scale(1.05) translateY(-75%);
+
+        width: 32rem;
+        margin-bottom: -40%;
+    }
+    .proj-img-container-lower img {
+        width: 34rem;
     }
     :root {
         --about-desc-font-size: 1.8rem;
@@ -1220,8 +1269,12 @@ blockquote span a:hover {
 
 @media screen and (max-width: 398px)
 {
-    #home {
-        background-size: contain;
+    .proj-img-container-lower {
+        width: 32rem;
+        margin-bottom: -60%;
+    }
+    .proj-img-container-lower img {
+        width: 34rem;
     }
     /* GForm Link */
     #gform-img {
