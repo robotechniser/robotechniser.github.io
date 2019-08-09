@@ -605,8 +605,8 @@ blockquote {
     text-align: left;
     line-height:1.6;
 
-    border-top: solid 2px #78C0A8;
-    border-bottom: solid 2px #78C0A8;
+    border-top: solid 3px #78C0A8;
+    border-bottom: solid 3px #78C0A8;
 }
   
 blockquote::before {
@@ -644,7 +644,7 @@ blockquote span a {
 }
 
 blockquote span a:hover {
-    opacity: 0.75;
+    opacity: 0.6;
 }
 
 /* PROJECTS */
@@ -966,7 +966,7 @@ blockquote span a:hover {
     position: fixed;
     bottom: 8rem;
     /* top: 87rem; */
-    right: 4rem;
+    right: 7.5rem;
 
     width: 6rem;
     height: 6rem;
