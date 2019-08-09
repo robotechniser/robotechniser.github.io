@@ -1194,9 +1194,17 @@ blockquote span a:hover {
 
 @media screen and (max-width: 601px)
 {
+    .project {
+        margin: 1rem;
+    }
+    .proj-img-container {
+        margin: 1rem;
+    }
     :root {
         --about-desc-font-size: 1.8rem;
         --quote-font-size: 2.5rem;
+
+        --proj-img-wide-width: 32rem;
     }
     /* Chevron - Down arrow */
     .down-arrow {
