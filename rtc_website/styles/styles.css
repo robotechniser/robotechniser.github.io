@@ -288,10 +288,10 @@ ul {
 }
 
 .menu--visible.menu--animatable  .app-menu {
-    -webkit-transition: all 330ms ease-out;
-    -moz-transition: all 330ms ease-out;
-    -o-transition: all 330ms ease-out;
-    transition: all 330ms ease-out;
+    -webkit-transition: all 230ms ease-out;
+    -moz-transition: all 230ms ease-out;
+    -o-transition: all 230ms ease-out;
+    transition: all 230ms ease-out;
 }
 
 /* Needed to change opacity - dimming effect */
@@ -1194,7 +1194,6 @@ blockquote span a:hover {
 
 @media screen and (max-width: 601px)
 {
-    
     :root {
         --about-desc-font-size: 1.8rem;
         --quote-font-size: 2.5rem;

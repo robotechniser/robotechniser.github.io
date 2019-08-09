@@ -75,10 +75,6 @@ window.onload = function () {
             }
         }
     }
-    // if (document.documentElement.clientWidth < 640) {
-    //     const home = document.getElementById('home');
-    //     home.dataset.imageSrc = "images/bg/solo-phone.jpg";
-    // }
 }
 
 // Parallax Fix for Android and iOS devices - DOESN'T WORK
