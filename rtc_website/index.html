@@ -21,21 +21,22 @@
     </head>
     <body>
         <!-- SLIDABLE HAMBURGER MENU -->
-        <span id="toggle" class="toggle-button">
-            <div class="menu-bar menu-bar-top"></div>
-            <div class="menu-bar menu-bar-middle"></div>
-            <div class="menu-bar menu-bar-bottom"></div>
-        </span>
-        <div id="menu" class="menu-sidebar">
-            <ul class="menu">
-                <li><a tabindex="0" class="menu-links" href="path/to/blog" title="Blog">BLOG</a></li>
-                <li><a tabindex="0" class="menu-links" href="#about-ws" title="About Us">ABOUT</a></li>
-                <li><a tabindex="0" class="menu-links" href="#proj-ws" title="Our Projects">PROJECTS</a></li>
-                <li><a tabindex="0" class="menu-links" href="#team-ws" title="Our Team">TEAM</a></li>
-                <li><a tabindex="0" class="menu-links" href="#connect-ws" title="Connect with us">JOIN US</a></li>
-            </ul>     
+        <div class="menu">
+            <div class="app-menu">
+                <ul class="menu-list">
+                    <li><a tabindex="0" class="menu-links" href="path/to/blog" title="Blog">BLOG</a></li>
+                    <li><a tabindex="0" class="menu-links" href="#about-ws" title="About Us">ABOUT</a></li>
+                    <li><a tabindex="0" class="menu-links" href="#proj-ws" title="Our Projects">PROJECTS</a></li>
+                    <li><a tabindex="0" class="menu-links" href="#team-ws" title="Our Team">TEAM</a></li>
+                    <li><a tabindex="0" class="menu-links" href="#connect-ws" title="Connect with us">JOIN US</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- For a dimming effect -->
+        <span id="toggle" class="toggle-button">
+                <div class="menu-bar menu-bar-top"></div>
+                <div class="menu-bar menu-bar-middle"></div>
+                <div class="menu-bar menu-bar-bottom"></div>
+        </span>
         <!-- THE LOGO -->
         <a tabindex="0" id="logo-link" href="index.html" title="RTC Homepage" target="_top">
             <picture>
@@ -43,9 +44,8 @@
                 <img id="logo" src="images/logo.png">
             </picture>
         </a>
-        <div id="global-overlay">
             <!-- HOME -->
-            <section class="tiles" id="home" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?walle" data-android-fix="true" data-ios-fix="true">
+            <section class="tiles" id="home" data-parallax="scroll" data-image-src="images/bg/solo.jpg" data-android-fix="true" data-ios-fix="true">
                 <!-- THE NAVBAR -->
                 <nav id="nav">
                     <ul id="nav-list">
@@ -66,22 +66,38 @@
             <div id="about-ws"></div> <!-- To make the nav-links/menu-links work -->
             <div class="whitespan about-us">About us</div>
 
-            <section class="tiles" id="about" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?astronaut" data-android-fix="true" data-ios-fix="true">
-                <p class="about-desc">We are the RoboTech Club of National Institute of Science Education and Research, Bhubaneswar. MORE TEXT HERE</p>
+            <section class="tiles" id="about" data-parallax="scroll" data-image-src="images/bg/beep.jpg" data-android-fix="true" data-ios-fix="true">
+                <div class="about-desc">
+                    <p >We are the RoboTech Club of the National Institute of Science Education and Research, Bhubaneswar.
+                        This club was established in 2015, along the lines of similar clubs in the IITs and various engineering colleges.
+                        Members from some of those clubs have come up with fantastic inventions of their own, which have won them national and international accolades.
+                        While we are still miles away from reaching their standards, we are sure, that the students of NISER have various innovative ideas of their own, which the club can help in turning into reality.
+                        With new funding from the School of Computer Sciences, we are in the process of setting up a cutting-edge Robotics Lab, that has tools, such as a 3D printer (the first one at NISER),
+                        various micro-controllers like Arduinos and Raspberry Pis, and many other instruments. We aspire to reach our full potential, in the near future.
+                    </p>
+                    <blockquote cite="Rod Grupen">
+                        At the bottom, robotics is about us. It is the discipline of emulating our lives - of wondering how we work.
+                        <span>&mdash; <a class="page-links" href="http://www-robotics.cs.umass.edu/~grupen/home.html">Dr. Rod Grupen</a></span>
+                    </blockquote>
+                </div>
             </section>
 
             <!-- PROJECTS -->
             <div id="proj-ws"></div> <!-- To make the nav-links/menu-links work -->
             <div class="whitespan projects">Our projects</div>
 
-            <section class="tiles" id="proj" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?robots" data-android-fix="true" data-ios-fix="true">
+            <section class="tiles" id="proj" data-parallax="scroll" data-image-src="images/bg/evol.jpg" data-android-fix="true" data-ios-fix="true">
                 <div class="project proj-1">
                     <h2 class="proj-ttl">
                         Robotic Sketcher
                     </h2>
                     <div class="proj-details">
-                        <img class="proj-img " src="images/projects/robo-sketcher/rs.jpg" title="The Robotic Sketcher"> 
-                        <img class="proj-img" src="images/projects/robo-sketcher/rs-calib.jpg" title="Testing & Calibrating the Robo Sketcher">
+                        <div class="proj-img-container proj-img-wide">
+                            <img class="proj-img proj-img-wide" src="images/projects/robo-sketcher/rs.jpg" title="The Robotic Sketcher">
+                        </div>
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/projects/robo-sketcher/rs-calib.jpg" title="Testing & Calibrating the Robo Sketcher">
+                        </div>
                         <p class="proj-desc">
                             This robot can sketch images on a sheet of paper, using a pen, mounted on a twin-axis system, typical of CNC mechines.
                             The drawing system is controlled using an Arduino UNO.
@@ -95,8 +111,12 @@
                         Smart Mirror
                     </h2>
                     <div class="proj-details">
-                        <img class="proj-img " src="images/projects/smart-mirror/sm-live.jpg" title="Smart Mirror">
-                        <img class="proj-img" src="images/projects/smart-mirror/sm-circuitry.jpg" title="Circuitry of the Smart Mirror">
+                        <div class="proj-img-container proj-img-wide">
+                            <img class="proj-img proj-img-wide" src="images/projects/smart-mirror/sm-live.jpg" title="Smart Mirror">
+                        </div>
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/projects/smart-mirror/sm-circuitry.jpg" title="Circuitry of the Smart Mirror">
+                        </div>
                         <p class="proj-desc">
                             Based on a Raspberry Pi 3b, this is a Smart Mirror (largely an implementation of <a class="page-links" href="https://github.com/MichMich/MagicMirror" target="_blank">MichMich's MagicMirror 2.0</a>),
                             which also features Google Assistant, hosts our ownCloud, and is capable of casting phone or PC displays.
@@ -110,8 +130,12 @@
                         Radio Telescope
                     </h2>
                     <div class="proj-details">
-                        <img class="proj-img" src="images/projects/RT/rt.jpg" title="Image from http://www.stargazing.net/david/radio/itty_bitty_radio_telescope.html">
-                        <img class="proj-img" src="images/projects/RT/rt-own.jpg" title="Checking the intensity of Solar Radiation">
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/projects/RT/rt.jpg" title="Image from http://www.stargazing.net/david/radio/itty_bitty_radio_telescope.html">
+                        </div>
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/projects/RT/rt-own.jpg" title="Checking the intensity of Solar Radiation">
+                        </div>
                         <p class="proj-desc">
                             This project is the result of a collaboration with the NISER Astronomy Club.
                             It consists of a basic setup, that can detect radio waves, coming from target celestial body, with a maximum frequency of 22 KHz.
@@ -127,8 +151,12 @@
                         Tesla Coil
                     </h2>
                     <div class="proj-details">
-                        <img class="proj-img " src="images/projects/TC/tc.jpg" title="Our Tesla Coil">
-                        <img class="proj-img" src="images/projects/TC/tc-circuit.jpg" title="Solid State Tesla Coil Circuit (Credit: https://www.electroboom.com/?p=521)">
+                        <div class="proj-img-container proj-img-wide">
+                            <img class="proj-img proj-img-wide" src="images/projects/TC/tc.jpg" title="Our Tesla Coil">
+                        </div>
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/projects/TC/tc-circuit.jpg" title="Solid State Tesla Coil Circuit (Credit: https://www.electroboom.com/?p=521)">
+                        </div>
                         <p class="proj-desc">
                             This is a Solid State Tesla Coil (Slayer Exciter), that can output upto 1200 V and lights up fluorescent bulbs, held in close proximity. It can also transmit wirless electricity (~5 V, albeit with lots of noise) to small circuits.
                             Since, the circuit is simple to understand and easy to build, we can use it for educational purposes for common people, interested in understanding wireless power transmission. <br><br>
@@ -141,7 +169,9 @@
                         RC Soccer Bot
                     </h2>
                     <div class="proj-details">
-                        <img class="proj-img" src="images/projects/robo-soccer/robo-soccer.jpg" title="Remote-Controlled Soccer Bot">
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/projects/robo-soccer/robo-soccer.jpg" title="Remote-Controlled Soccer Bot">
+                        </div>
                         <p class="proj-desc">
                             If you love to make robots and see them rolling in soccer arena, then you’ll love this! This bot can play soccer by dribbling and kicking a ball, though not as good as a real soccer player.
                             Powered by a 12 V Battery Pack, this robot is controlled, using a simple remote control. For movements, it makes use of 4 metal-geared motors (300 RPM) and it uses a 500 RPM geared motor, connected to metal shaft, for kicking the ball.
@@ -155,7 +185,9 @@
                         8-Bit Computer
                     </h2>
                     <div class="proj-details">
-                        <img class="proj-img" src="images/projects/8BitC/8bc.jpg" title="Circuit Diagram of an 8-Bit Computer. (Credit: https://eater.net/8bit/kits)">
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/projects/8BitC/8bc.jpg" title="Circuit Diagram of an 8-Bit Computer. (Credit: https://eater.net/8bit/kits)">
+                        </div>
                         <p class="proj-desc">
                             We plan to make a 8-bit computer on breadboard, using only simple logic gates.
                             Its main objective would be to understand computer logic at the very basic level and see how things work at that level.
@@ -170,7 +202,9 @@
                         Line Follower Robot
                     </h2>
                     <div class="proj-details">
-                        <img class="proj-img" src="images/no-image-available.jpg" title="No Image Available for this Project">
+                        <div class="proj-img-container">
+                            <img class="proj-img" src="images/no-image-available.jpg" title="No Image Available for this Project">
+                        </div>
                         <p class="proj-desc">
                             A Line-Following Robot is an autonomous robot, which is able to follow either a black or white line, that is drawn on a surface, consisting of contrasting colours.
                             It uses several sensors, using an Arduino Uno, to identify the line, thereby allowing it to stay on the track.
@@ -185,7 +219,7 @@
             <div id="team-ws"></div> <!-- To make the nav-links/menu-links work -->
             <div class="whitespan team"><i class="fas fa-chevron-left"></i>The Team/<i class="fas fa-chevron-right"></i></div>
 
-            <section class="tiles" id="team" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?legoland" data-android-fix="true" data-ios-fix="true">
+            <section class="tiles" id="team" data-parallax="scroll" data-image-src="images/bg/robos.jpg" data-android-fix="true" data-ios-fix="true">
                 <span class="person">
                     <picture title="Dr. Subhankar Mishra">
                         <source class="person-pic" type="image/webp" srcset="images/people/webp/subhankar.webp">
@@ -449,7 +483,7 @@
             <div id="connect-ws"></div> <!-- To make the nav-links/menu-links work -->
             <div class="whitespan connect">Connect With Us</div>
 
-            <section  class="tiles" id="connect" data-parallax="scroll" data-image-src="https://source.unsplash.com/random/?asimo" data-android-fix="true" data-ios-fix="true">
+            <section  class="tiles" id="connect" data-parallax="scroll" data-image-src="images/bg/mural.jpg" data-android-fix="true" data-ios-fix="true">
                 <div class="connect-desc">
                     <!-- THE LOGO -->
                     <a id="connect-logo-link" href="" title="RTC Homepage" target="_top">
@@ -473,23 +507,22 @@
                     </div>
                     <!-- MAIL, GITHUB, WHATSAPP, YT, FB, INSTA -->
                     <div class="club-details-container">
+                        <a class="club-details github" href="https://github.com/robotechniser" title="Link to our GitHub" target="_blank"><i class="fab fa-github"></i></a>
                         <a class="club-details mail" href="mailto:rtc@niser.ac.in" title="Mail Us" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a class="club-details github" href="" title="Link to our GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="club-details whatsapp" href="tel:1234567890" title="WhatsApp Us" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="club-details whatsapp" href="https://wa.me/919153156311" title="WhatsApp Us" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a class="club-details yt" href="https://www.youtube.com/channel/UCDhZH_ndJbuxbzmKAyanrqQ" title="Link to our YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a class="club-details fb" href="" title="Link to our Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a class="club-details insta" href="" title="Link to our Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <!-- <a class="club-details insta" href="" title="Link to our Instagram" target="_blank"><i class="fab fa-instagram"></i></a> -->
                     </div>
                     <!-- GFORM LINK -->
                     <div id="gform-span">
-                        Club Membership Form: <a id="gform" href="" title="Link to Membership Form" target="_blank"><img id="gform-img" src="images/gform.png" title="Link to Membership Form "> </a>
+                        Club Membership Form: <a id="gform" href="https://forms.gle/Z5yFoZTv9Dyzj4pdA" title="Link to Membership Form" target="_blank"><img id="gform-img" src="images/gform.png" title="Link to Membership Form "> </a>
                     </div>
                 </div>
             </section>
             <footer>
                 Powered by <a tabindex="0" id="selfref" href="https://sdgniser.github.io" title="Powered by Software Development Group, NISER" target="_blank">Software Development Group</a>, NISER. All rights reserved.
             </footer>
-        </div>
         <!-- Back to Top button -->
         <a href="#home" id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></a>
 
