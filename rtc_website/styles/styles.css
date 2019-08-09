@@ -1186,12 +1186,15 @@ blockquote span a:hover {
         padding: 1rem;
     }
     #backToTop {
-        display: none !important;
+        position: fixed;
+        bottom: 5rem;
+        right: 2.5rem;
     }
 }
 
 @media screen and (max-width: 601px)
 {
+    
     :root {
         --about-desc-font-size: 1.8rem;
         --quote-font-size: 2.5rem;
@@ -1210,6 +1213,9 @@ blockquote span a:hover {
 
 @media screen and (max-width: 398px)
 {
+    #home {
+        background-size: contain;
+    }
     /* GForm Link */
     #gform-img {
         margin: 1.5rem 1rem -1.75rem 1rem;
@@ -1244,7 +1250,9 @@ blockquote span a:hover {
         position: relative;
         top: 56%;
     }
-    #backToTop {
-        display: none !important;
-    }
+    /* #backToTop {
+        position: fixed;
+        bottom: 5rem;
+        right: 2.5rem;
+    } */
 }
