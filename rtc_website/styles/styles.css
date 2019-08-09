@@ -999,7 +999,7 @@ blockquote span a:hover {
 @media screen and (min-width: 960px) and (max-width: 1875px)
 {
     .proj-details div:first-of-type {
-        opacity: 0.5;
+        opacity: 0.6;
 
         -moz-transition: 0.25s;
         -o-transition: 0.25s;
@@ -1121,7 +1121,7 @@ blockquote span a:hover {
 @media screen and (max-width: 902px)
 {
     .proj-details div:first-of-type {
-        opacity: 0.5;
+        opacity: 0.6;
 
         -moz-transition: 0.25s;
         -o-transition: 0.25s;
@@ -1137,6 +1137,9 @@ blockquote span a:hover {
         -o-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
+    }
+    .proj-details div:first-of-type:hover + div {
+        opacity: 0.6;
     }
     .proj-img-container:hover {
         opacity: 1;
