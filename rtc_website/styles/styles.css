@@ -253,7 +253,6 @@ ul {
     
     height: 100%;
     width: 22rem;
-    margin-right: -22rem;
 
     overflow: auto;
     
@@ -262,13 +261,28 @@ ul {
     text-align: center;
     line-height: 8rem;
 
-    -moz-transition: 0.25s;
-    -webkit-transition: 0.25s;
-    transition: 0.25s;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-transition: transform 250ms linear;
+    -webkit-transition: transform 250ms linear;
+	transition: transform 250ms linear;
 }
 
 .menu-show {
-    margin-right: 0;
+	-webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+
+    -moz-transition: transform 250ms linear;
+    -webkit-transition: transform 250ms linear;
+    transition: transform 250ms linear;
+    
     -webkit-box-shadow: 0 0 6rem 0 rgba(241, 239, 209, 0.75);
     -moz-box-shadow: 0 0 6rem 0 rgba(241, 239, 209, 0.75);
     box-shadow: 0 0 6rem 0 rgba(241, 239, 209, 0.75);
