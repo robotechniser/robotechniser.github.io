@@ -15,7 +15,7 @@ for (i = 0; i < acc.length; i++) {
       
     } else {
       panel.style.maxHeight = panel.scrollHeight + "%";
-      panel.style.padding = "4rem";
+      panel.style.padding = "3rem";
       panel.style.boxShadow = "0 0 3rem 0 rgba(0,0,0,0.85)";
     } 
   });

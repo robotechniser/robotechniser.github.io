@@ -648,7 +648,7 @@ main {
     top: 1.75rem;
 }
 
-.entry-date i {
+.icons {
     margin-right: 1rem;
 }
 
@@ -679,7 +679,7 @@ main {
 }
 
 .panel p {
-    margin: 4rem;
+    margin: 4rem 2rem;
     font-family: "Zilla Slab";
     font-size: 2.25rem;
 
@@ -1306,6 +1306,13 @@ blockquote span a:hover {
     .person-dsgn {
         margin: 0;
     }
+    /* Blog-related stuff */
+    /* main {
+        padding: 6vw 2vw 0 2vw;
+    } */
+    main button:first-of-type {
+        margin-top: 10rem;
+    }
 }
 @media screen and (max-width: 902px)
 {
@@ -1363,6 +1370,13 @@ blockquote span a:hover {
     }
     .single-img {
         opacity: 1 !important;
+    }
+    /* Blog-related stuff */
+    /* main {
+        padding: 6vw 2vw 0 2vw;
+    } */
+    main button:first-of-type {
+        margin-top: 10rem;
     }
 }
 @media screen and (max-width: 960px)
@@ -1500,6 +1514,30 @@ blockquote span a:hover {
         bottom: 5rem;
         right: 2.5rem;
     }
+    /* Blog-related stuff */
+    /* main {
+        padding: 6vw 2vw 0 2vw;
+    } */
+    main button:first-of-type {
+        margin-top: 10rem;
+    }
+    .accordion:after {
+        font-size: 3rem;
+    
+        position: absolute;
+        left: 49%;
+    }
+    .entry-author {
+        position: relative;
+        top: -1rem;
+        right: -25%;
+
+        border: none;
+    }
+    .entry-date {
+        position: relative;
+        top: 3.5rem;
+    }
 }
 
 @media screen and (max-width: 601px)
@@ -1526,6 +1564,25 @@ blockquote span a:hover {
         position: absolute;
         right: 3rem;
         bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 720px)
+{
+    .entry-author {
+        font-size: 2rem;
+
+        position: relative;
+        /* top: -1rem; */
+        right: -25%;
+
+        border: none;
+    }
+    .entry-date {
+        font-size: 2rem;
+
+        position: relative;
+        top: 4.5rem;
     }
 }
 
