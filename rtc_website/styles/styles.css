@@ -497,7 +497,9 @@ ul {
     background: white url(https://source.unsplash.com/random/?walle) center/cover no-repeat fixed;
 } */
 
+/* BLOG-RELATED STUFF */
 #blog {
+    min-height: 100vh;
     height: auto;
     padding: 4vw 3vw;
     padding-top: 0;
@@ -508,20 +510,71 @@ ul {
 .blog-links
 {
     display: block;
+    float: left;
+
+    position: relative;
+    left: 28.7%;
 
     font-family: 'Courier New', Courier, monospace;
     font-size: var(--nav-link-font-size);
     font-weight: 600;
     color: var(--nav-link-col);
 
-    margin: 2.5vh auto;
+    margin: 2.5vh var(--nav-link-margin);
 
     text-align: center;
 }
 
+main {
+    padding: 6vw 2vw 0 2vw;
+    height: auto;
+}
+
+.accordion {
+    background-color: #eee;
+
+    padding: 1rem 2rem;
+    width: 100%;
+
+    border: none;
+    
+    color: #444;
+    font-size: 15px;
+
+    transition: 0.4s;
+
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+
+.active, .accordion:hover {
+    filter: brightness(140%);
+}
+
+.accordion:after {
+    content: '\25BC';
+    color: rgb(212, 212, 158);
+    font-size: 4rem;
+    font-weight: bold;
+
+    position: absolute;
+    left: 49%;
+
+    margin: 2.4rem 0;
+
+    transition: 0.4s;
+}
+
+.active:after {
+    content: '\25B2';
+
+    transform: rotate(360deg);
+}
+
 .blog-entry {
-    margin: 5rem;
-    padding: 3rem 5rem;
+    /* margin: 5.5rem; */
+    /* padding: 3rem 5rem; */
 
     font-family: Montserrat, sans-serif;
     font-size: var(--about-desc-font-size);
@@ -531,8 +584,8 @@ ul {
 
     background: rgba(138, 164, 165, 0.5);
 
-    -webkit-backdrop-filter: blur(0.5rem);
-    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.25rem);
+    backdrop-filter: blur(0.25rem);
 
     /* border: 2px dotted red; */
 
@@ -540,46 +593,97 @@ ul {
     -moz-box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
     box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
     
-    height: 80vh;
+    height: auto;
 }
 
 .last-entry {
     margin-bottom: 0;
 }
 
+.entry-top {
+    /* margin: 1rem 0; */
+    /* position: relative;
+    top: 50%; */
+    color: palegoldenrod;
+    font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .entry-ttl {
     float: left;
     position: relative;
-    top: -4rem;
+    top: -1.44rem;
+
+    /* margin: 2rem 0 0 0; */
 }
 
 .entry-ttl:before {
     font-family: Arial;
     content: "\0023";
-    color:#78C0A8;
-    font-size:10rem;
+
+    color: #78C0A8;
+    font-size: 6rem;
+
     position: relative;
-    top: 2rem;
+    top: 0.75rem;
+
     margin-right: 2rem;
+    
     text-shadow: 3px 3px 3px #333333;
+}
+
+.entry-author {
+    float: right;
+    position: relative;
+    top: 0.7rem;
+    right: 1%;
+
+    padding-right: 2rem;
+    padding: 1rem;
+    border-right: 4px solid rgba(252, 185, 109, 0.75);
 }
 
 .entry-date {
     float: right;
     position: relative;
-    top: 2rem;
+    top: 1.75rem;
 }
 
 .entry-date i {
     margin-right: 1rem;
 }
 
-.entry-top {
-    /* margin: 1rem 0; */
+/* Actual blog text */
+.panel {
+    background-color: rgb(8, 126, 139);
+
+    max-height: 0;
+
+    margin-bottom: 6rem;
+
+    color: white;
+    font-size: 2.5rem;
+
+    /* transition: 0.5s; */
+
+    overflow: hidden;
+    transition: max-height 0.4s ease-out,
+                padding 0.4s ease-out;
+
+    /* background: rgb(101, 141, 198); */
+    /* padding: auto; */
 }
 
-.entry-desc {
-    margin-top: 8rem;
+.panel h2 {
+    font-family: Arvo;
+    font-weight: 600;
+}
+
+.panel p {
+    margin: 4rem;
+    font-family: "Zilla Slab";
+    font-size: 2.25rem;
+
+    text-align: justify;
 }
 
 /* THE TITLE */

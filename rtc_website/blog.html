@@ -8,7 +8,7 @@
         <!-- <meta name="description" content="TO BE EDITED."> ** -->
 
         <!-- Google Fonts sheet -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One|Inconsolata|Aleo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Zilla+Slab|Roboto|Montserrat|Russo+One|Inconsolata|Aleo" rel="stylesheet">
 
         <!-- Font Awesome - Automatic server-side updates -->
         <script src="https://kit.fontawesome.com/377d1afaa4.js"></script>
@@ -49,41 +49,54 @@
                 <!-- THE NAVBAR -->
                 <nav id="nav">
                     <ul id="nav-list">
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="index.html" title="Home">HOME</a></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="index.html#about-ws" title="About Us">ABOUT</a></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="index.html#proj-ws" title="Our Projects">PROJECTS</a></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="index.html#team-ws" title="Our Team">TEAM</a></li>
-                        <li class="ulist"><a tabindex="0" class="nav-links" href="index.html#connect-ws" title="Connect with us">JOIN US</a></li>
+                        <li class="ulist"><a tabindex="0" class="blog-links" href="index.html" title="Home">HOME</a></li>
+                        <li class="ulist"><a tabindex="0" class="blog-links" href="index.html#about-ws" title="About Us">ABOUT</a></li>
+                        <li class="ulist"><a tabindex="0" class="blog-links" href="index.html#proj-ws" title="Our Projects">PROJECTS</a></li>
+                        <li class="ulist"><a tabindex="0" class="blog-links" href="index.html#team-ws" title="Our Team">TEAM</a></li>
+                        <li class="ulist"><a tabindex="0" class="blog-links" href="index.html#connect-ws" title="Connect with us">JOIN US</a></li>
                     </ul>
                 </nav>
                 <!-- Sidebar -->
                 <main>
-                    <div class="blog-entry blog-entry-1">
+                    <button class="accordion blog-entry blog-entry-1">
                         <div class="entry-top">
                             <span class="entry-ttl">Blog Entry #1</span>
                             <span class="entry-date"><i class="fas fa-calendar-day"></i>August 01, 2019</span>
+                            <span class="entry-author">Author #1</span>
                         </div>
-                        <div class="entry-desc">
-                            HELLO WORLD!
-                        </div>
+                    </button>
+                    <div class="panel">
+                        <h2>
+                            Hello World!
+                        </h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
                     </div>
-                    <div class="blog-entry blog-entry-2">
+                    
+                    <button class="accordion blog-entry blog-entry-2">
                         <div class="entry-top">
                             <span class="entry-ttl">Blog Entry #2</span>
-                            <span class="entry-date"><i class="fas fa-calendar-day"></i>August 02, 2019</span>
+                            <span class="entry-date"><i class="fas fa-calendar-day"></i>August 01, 2019</span>
+                            <span class="entry-author">Author #1</span>
                         </div>
-                        <div class="entry-desc">
-                            HELLO WORLD!
-                        </div>
+                    </button>
+                    <div class="panel">
+                        HELLO WORLD!
                     </div>
-                    <div class="blog-entry blog-entry-3 last-entry">
+                    
+                    <button class="accordion blog-entry blog-entry-3 last-entry">
                         <div class="entry-top">
                             <span class="entry-ttl">Blog Entry #3</span>
-                            <span class="entry-date"><i class="fas fa-calendar-day"></i>August 03, 2019</span>
+                            <span class="entry-date"><i class="fas fa-calendar-day"></i>August 01, 2019</span>
+                            <span class="entry-author">Author #1</span>
                         </div>
-                        <div class="entry-desc">
-                            HELLO WORLD!
-                        </div>
+                    </button>
+                    <div class="panel">
+                        HELLO WORLD!
                     </div>
                 </main>
             </section>
@@ -93,8 +106,9 @@
         <!-- Back to Top button -->
         <a href="#blog" id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></a>
         
-        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="scripts/parallax.min.js"></script> -->
-        <!-- <script type="text/javascript" src="scripts/scripts.js"></script> -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- <script type="text/javascript" src="scripts/parallax.min.js"></script> -->
+        <script type="text/javascript" src="scripts/scripts.js"></script>
+        <script type="text/javascript" src="scripts/accordion_script.js"></script>
     </body>
 </html>
