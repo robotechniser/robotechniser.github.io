@@ -78,8 +78,8 @@ window.onload = function () {
 }
 
 // Parallax Fix for Android and iOS devices - DOESN'T WORK
-$("#home, #about, #proj, #team, #connect").parallax({
-  iosFix: true,
-  androidFix: true,
-  overScrollFix: true
-});
+// $("#home, #about, #proj, #team, #connect").parallax({
+//   iosFix: true,
+//   androidFix: true,
+//   overScrollFix: true
+// });

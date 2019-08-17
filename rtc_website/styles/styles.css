@@ -1,3 +1,5 @@
+/* BGs from http://thepatternlibrary.com/ */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,16 +14,18 @@
 
     --page-links-col: rgba(0, 250, 154, 0.8);
     
-    --logo-width: 7rem;
+    --logo-width: 9rem;
 
-    --intro-ttl-font-size: 8rem;
-    --intro-ttl-col: rgb(240, 224, 196);
+    --intro-ttl-font-size: 10rem;
+    --intro-ttl-col: rgb(218, 248, 248);
+    /* rgb(240, 224, 196); */
 
     --menu-sidebar-bg-col: rgba(30, 93, 136, 0.75);
      /* rgba(41, 118, 148, 0.75); */
 
     --nav-link-font-size: 2.2rem;
-    --nav-link-col: yellow;
+    --nav-link-col: rgb(188, 255, 233);
+    /* cornsilk, mintcream, moccasin, rgb(218, 255, 5) */
     --nav-link-margin: 2vw;
 
     --down-arrow-size: 4rem;
@@ -78,6 +82,17 @@
     --insta-col: #fb3958;
     --github-col: rgb(23, 21, 21);
 }
+
+@font-face {
+    font-family: mx;
+    src: url(../fonts/mexcellent\ rg.ttf);
+}
+
+@font-face {
+    font-family: mx3d;
+    src: url(../fonts/mexcellent\ 3d.ttf);
+}
+
 
 body
 {
@@ -169,14 +184,15 @@ ul {
 }
 
 .toggle-button .menu-bar-top {
-    border: 4px solid rgb(235, 107, 81);
+    border: 4px solid rgb(248, 82, 110);
+    /* rgb(235, 107, 81); */
     border-bottom: none;
     top: 0;
 }
 
 .toggle-button .menu-bar-middle {
     height: 4px;
-    background-color: rgb(103, 224, 178);
+    background-color: rgb(39, 246, 229);
     margin-top: 7px;
     margin-bottom: 7px;
     top: 4px;
@@ -410,13 +426,17 @@ ul {
     background: var(--whitespan-bg-col);
 
     padding: 2rem 0;
+
+    -moz-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 /* LOGO Image */
 #logo-link
 {
     position: fixed;
-    top: 1rem;
+    top: 0.5rem;
 
     z-index: 15;
 
@@ -431,15 +451,17 @@ ul {
     -moz-transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+
+    opacity: 0.8;
 }
 
 #logo:hover
 {
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #nav
@@ -493,217 +515,34 @@ ul {
 }
 
 /* HOME */
-/* #home {
-    background: white url(https://source.unsplash.com/random/?walle) center/cover no-repeat fixed;
-} */
-
-/* BLOG-RELATED STUFF */
-#blog {
-    min-height: 100vh;
-    height: auto;
-    padding: 4vw 3vw;
-    padding-top: 0;
-    margin: 0;
-    background: white url("../images/bg/blog-bg.jpg") center/cover no-repeat fixed;
-}
-
-.blog-links
-{
-    display: block;
-    float: left;
-
-    position: relative;
-    left: 28.7%;
-
-    font-family: 'Courier New', Courier, monospace;
-    font-size: var(--nav-link-font-size);
-    font-weight: 600;
-    color: var(--nav-link-col);
-
-    margin: 2.5vh var(--nav-link-margin);
-
-    text-align: center;
-}
-
-main {
-    padding: 6vw 2vw 0 2vw;
-    height: auto;
-}
-
-.accordion {
-    background-color: #eee;
-
-    padding: 1rem 2rem;
-    width: 100%;
-
-    border: none;
-    
-    color: #444;
-    font-size: 15px;
-
-    transition: 0.4s;
-
-    cursor: pointer;
-    text-align: center;
-    outline: none;
-}
-
-.active, .accordion:hover {
-    filter: brightness(140%);
-}
-
-.accordion:after {
-    content: '\25BC';
-    color: rgb(212, 212, 158);
-    font-size: 4rem;
-    font-weight: bold;
-
-    position: absolute;
-    left: 49%;
-
-    margin: 2.4rem 0;
-
-    transition: 0.4s;
-}
-
-.active:after {
-    content: '\25B2';
-
-    transform: rotate(360deg);
-}
-
-.blog-entry {
-    /* margin: 5.5rem; */
-    /* padding: 3rem 5rem; */
-
-    font-family: Montserrat, sans-serif;
-    font-size: var(--about-desc-font-size);
-    color: var(--about-desc-col);
-
-    text-align: justify;
-
-    background: rgba(138, 164, 165, 0.5);
-
-    -webkit-backdrop-filter: blur(0.25rem);
-    backdrop-filter: blur(0.25rem);
-
-    /* border: 2px dotted red; */
-
-    -webkit-box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
-    -moz-box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
-    box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
-    
-    height: auto;
-}
-
-.last-entry {
-    margin-bottom: 0;
-}
-
-.entry-top {
-    /* margin: 1rem 0; */
-    /* position: relative;
-    top: 50%; */
-    color: palegoldenrod;
-    font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.entry-ttl {
-    float: left;
-    position: relative;
-    top: -1.44rem;
-
-    /* margin: 2rem 0 0 0; */
-}
-
-.entry-ttl:before {
-    font-family: Arial;
-    content: "\0023";
-
-    color: #78C0A8;
-    font-size: 6rem;
-
-    position: relative;
-    top: 0.75rem;
-
-    margin-right: 2rem;
-    
-    text-shadow: 3px 3px 3px #333333;
-}
-
-.entry-author {
-    float: right;
-    position: relative;
-    top: 0.7rem;
-    right: 1%;
-
-    padding-right: 2rem;
-    padding: 1rem;
-    border-right: 4px solid rgba(252, 185, 109, 0.75);
-}
-
-.entry-date {
-    float: right;
-    position: relative;
-    top: 1.75rem;
-}
-
-.icons {
-    margin-right: 1rem;
-}
-
-/* Actual blog text */
-.panel {
-    background-color: rgb(8, 126, 139);
-
-    max-height: 0;
-
-    margin-bottom: 6rem;
-
-    color: white;
-    font-size: 2.5rem;
-
-    /* transition: 0.5s; */
-
-    overflow: hidden;
-    transition: max-height 0.4s ease-out,
-                padding 0.4s ease-out;
-
-    /* background: rgb(101, 141, 198); */
-    /* padding: auto; */
-}
-
-.panel h2 {
-    font-family: Arvo;
-    font-weight: 600;
-}
-
-.panel p {
-    margin: 4rem 2rem;
-    font-family: "Zilla Slab";
-    font-size: 2.25rem;
-
-    text-align: justify;
+#home {
+    background: white url(../images/bg/science.png) repeat fixed;
 }
 
 /* THE TITLE */
 #ttl
 { 
     position: relative;
-    top: 35%;
+    top: 33.5%;
 
     z-index: 0;
 
     color: var(--intro-ttl-col);
-    font-family: Aleo, 'Courier New', Courier, monospace;;
+    
+    font-family: mx, 'Courier New', Courier, monospace;
     font-size: var(--intro-ttl-font-size);
     font-weight: 500;
+
+    -moz-transition: 0.35s;
+    -o-transition: 0.35s;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
 }
 
 .down-arrow {
     display: block;
     position: relative;
-    top: 75vh;
+    top: 72vh;
 
     color: var(--down-arrow-color);
 
@@ -713,7 +552,7 @@ main {
 }
 
 .down-arrow a {
-    color: orangered !important;
+    color: papayawhip !important;
 }
 
 /* THE FOOTER */
@@ -744,7 +583,8 @@ footer
     padding: 4rem;
 
     height: auto;
-    /* background: white url(https://source.unsplash.com/random/?astronaut) center/cover no-repeat fixed; */
+
+    background: white url(../images/bg/asteroids.png) repeat fixed;
 }
 
 .about-desc {
@@ -766,16 +606,9 @@ footer
     box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
     
     height: 100%;
-
-    /* display: grid;
-    grid-template-areas: "text" "quote";
-    grid-template-columns: 6fr 6fr;
-    grid-column-gap: 3vw; */
 }
 
 .about-desc p {
-    /* grid-area: "text"; */
-
     padding: 4rem;
 }
 
@@ -847,6 +680,7 @@ blockquote span a:hover {
     grid-column-gap: 2rem;
 
     /* background: white url(https://source.unsplash.com/random/?robots) center/cover no-repeat fixed; */
+    background: white url(../images/bg/alchemy.png) repeat fixed;
 
     padding: 4rem;
     height: auto;
@@ -945,6 +779,7 @@ blockquote span a:hover {
     justify-content: center;
 
     /* background: white url(https://source.unsplash.com/random/?legoland) center/cover no-repeat fixed; */
+    background: white url(../images/bg/shattered-island.png) repeat fixed;
 
     padding: 4rem;
 
@@ -1038,6 +873,7 @@ blockquote span a:hover {
     padding: 3vw;
 
     /* background: white url(https://source.unsplash.com/random/?asimo) center/cover no-repeat fixed; */
+    background: white url(../images/bg/lines.png) repeat fixed;
 }
     
 .connect-desc {
@@ -1067,6 +903,7 @@ blockquote span a:hover {
 .connect-niser {
     margin: 3vh 0;
 
+    color: rgb(39, 59, 122);
     font-size: 3rem;
     font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -1077,6 +914,8 @@ blockquote span a:hover {
     width: var(--connect-logo-width);
 
     margin: 2rem 0;
+
+    opacity: 0.75;
 
     -moz-transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
@@ -1198,25 +1037,13 @@ blockquote span a:hover {
     }
     .proj-details div:first-of-type:hover {
         opacity: 1;
+        z-index: 30;
 
         -moz-transform: scale(1.05);
         -ms-transform: scale(1.05);
         -o-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
-    }
-    .proj-img-container:hover {
-        opacity: 1;
-        z-index: 30;
-
-        -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-        -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-        box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-
-        -moz-transition: 0.25s;
-        -o-transition: 0.25s;
-        -webkit-transition: 0.25s;
-        transition: 0.25s;
     }
     .proj-img-container-lower {
         -moz-transition: 0.4s;
@@ -1243,6 +1070,7 @@ blockquote span a:hover {
         margin-top: 0;
     }
 }
+
 @media screen and (min-width: 960px) and (max-width: 1124px)
 {
     :root {
@@ -1258,7 +1086,7 @@ blockquote span a:hover {
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 85vh;
+        top: 82vh;
     }
     /* HAM MENU */
     .toggle-button {
@@ -1282,6 +1110,7 @@ blockquote span a:hover {
     #proj
     {
         grid-template-columns: 6fr 6fr;
+        grid-column-gap: 0.75vw;
 
         text-align: center;
 
@@ -1296,6 +1125,9 @@ blockquote span a:hover {
     .proj-desc {
         margin: 4rem;
     }
+    .project {
+        margin: 0.3vw;
+    }
     /* Team */
     #team {
         padding: 2.5rem;
@@ -1306,14 +1138,8 @@ blockquote span a:hover {
     .person-dsgn {
         margin: 0;
     }
-    /* Blog-related stuff */
-    /* main {
-        padding: 6vw 2vw 0 2vw;
-    } */
-    main button:first-of-type {
-        margin-top: 10rem;
-    }
 }
+
 @media screen and (max-width: 902px)
 {
     .proj-details div:first-of-type {
@@ -1356,6 +1182,8 @@ blockquote span a:hover {
         -webkit-transition: 0.4s;
         transition: 0.4s;
 
+        perspective: 1000px;
+
         -moz-transform: scale(1.05) translateY(-75%);
         -ms-transform: scale(1.05) translateY(-75%);
         -o-transform: scale(1.05) translateY(-75%);
@@ -1371,20 +1199,14 @@ blockquote span a:hover {
     .single-img {
         opacity: 1 !important;
     }
-    /* Blog-related stuff */
-    /* main {
-        padding: 6vw 2vw 0 2vw;
-    } */
-    main button:first-of-type {
-        margin-top: 10rem;
-    }
 }
+
 @media screen and (max-width: 960px)
 {
     :root {
-        --logo-width: 4rem;
+        --logo-width: 6rem;
 
-        --intro-ttl-font-size: 6rem;
+        --intro-ttl-font-size: 8rem;
 
         --nav-link-font-size: 2rem;
         --nav-link-margin: 2vw;
@@ -1412,6 +1234,9 @@ blockquote span a:hover {
         --gform-img-width: 5rem;
     }
     /* Header */
+    #logo-link {
+        top: 0.25rem;
+    }
     #ttl
     { 
         position: relative;
@@ -1447,7 +1272,6 @@ blockquote span a:hover {
     }
     .about-desc p {
         padding: 4vw;
-        /* padding-bottom: 0; */
     }
     blockquote {
         margin-top: 10rem;
@@ -1493,7 +1317,6 @@ blockquote span a:hover {
     }
     .person-details {
         font-size: 3rem;
-        /* margin: 1rem; */
     }
     /* Connect/About */
     .club-details {
@@ -1514,36 +1337,17 @@ blockquote span a:hover {
         bottom: 5rem;
         right: 2.5rem;
     }
-    /* Blog-related stuff */
-    /* main {
-        padding: 6vw 2vw 0 2vw;
-    } */
-    main button:first-of-type {
-        margin-top: 10rem;
-    }
-    .accordion:after {
-        font-size: 3rem;
-    
-        position: absolute;
-        left: 49%;
-    }
-    .entry-author {
-        position: relative;
-        top: -1rem;
-        right: -25%;
-
-        border: none;
-    }
-    .entry-date {
-        position: relative;
-        top: 3.5rem;
-    }
 }
 
 @media screen and (max-width: 601px)
 {
+    :root {
+        --intro-ttl-font-size: 6rem;
+    }
+    /* Projects */
     .project {
         margin: 1rem;
+        max-width: 94vw;
     }
     .proj-img-container-lower {
         width: 32rem;
@@ -1558,7 +1362,7 @@ blockquote span a:hover {
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 78vh;
+        top: 75vh;
     }
     blockquote::after {
         position: absolute;
@@ -1567,27 +1371,16 @@ blockquote span a:hover {
     }
 }
 
-@media screen and (max-width: 720px)
+@media screen and (max-width: 415px)
 {
-    .entry-author {
-        font-size: 2rem;
-
-        position: relative;
-        /* top: -1rem; */
-        right: -25%;
-
-        border: none;
-    }
-    .entry-date {
-        font-size: 2rem;
-
-        position: relative;
-        top: 4.5rem;
-    }
-}
-
-@media screen and (max-width: 398px)
-{
+    /* Projects */
+    .proj-img:hover {
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }    
     .proj-img-container-lower {
         width: 32rem;
         margin-bottom: -60%;
@@ -1600,11 +1393,18 @@ blockquote span a:hover {
         margin: 1.5rem 1rem -1.75rem 1rem;
     }
     .about-desc p {
-        padding: 4vw;
+        padding: 6vw;
         padding-bottom: 0;
+    }
+    .person {
+        margin: 2rem;
     }
     blockquote {
         margin: 2rem 0;
+        font-size: 2.1rem;
+    }
+    blockquote span a {
+        font-size: 2.25rem;
     }
 }
 
@@ -1627,7 +1427,7 @@ blockquote span a:hover {
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 56%;
+        top: 53%;
     }
     /* #backToTop {
         position: fixed;

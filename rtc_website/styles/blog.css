@@ -1,11 +1,11 @@
-* BLOG-RELATED STUFF */
+/* BLOG-RELATED STUFF */
 #blog {
     min-height: 100vh;
     height: auto;
     padding: 4vw 3vw;
     padding-top: 0;
     margin: 0;
-    background: white url("../images/bg/blog-bg.jpg") center/cover no-repeat fixed;
+    background: white url("../images/bg/tools.png") center repeat fixed;
 }
 
 .blog-links
@@ -54,9 +54,9 @@ main {
 }
 
 .accordion:after {
-    content: '\25BC';
+    content: '\21E3';
     color: rgb(212, 212, 158);
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
 
     position: absolute;
@@ -64,11 +64,14 @@ main {
 
     margin: 2.4rem 0;
 
+    /* opacity: 0.75; */
+
+    /* transform: rotate(180deg); */
     transition: 0.4s;
 }
 
 .active:after {
-    content: '\25B2';
+    /* content: '\25B2'; */
 
     transform: rotate(360deg);
 }
@@ -112,7 +115,7 @@ main {
 .entry-ttl {
     float: left;
     position: relative;
-    top: -1.44rem;
+    top: -1.25rem;
 
     /* margin: 2rem 0 0 0; */
 }
@@ -149,7 +152,7 @@ main {
     top: 1.75rem;
 }
 
-.entry-date i {
+.icons {
     margin-right: 1rem;
 }
 
@@ -180,9 +183,71 @@ main {
 }
 
 .panel p {
-    margin: 4rem;
+    margin: 4rem 2rem;
     font-family: "Zilla Slab";
     font-size: 2.25rem;
 
     text-align: justify;
+}
+
+/* BLOG ONLY */
+@media screen and (min-width: 960px) and (max-width: 1124px)
+{
+    main button:first-of-type {
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 960px)
+{
+    main button:first-of-type {
+        margin-top: 10rem;
+    }
+    .accordion:after {
+        font-size: 3rem;
+    
+        position: absolute;
+        left: 49%;
+    }
+    .entry-author {
+        position: relative;
+        top: -1rem;
+        right: -25%;
+
+        border: none;
+    }
+    .entry-date {
+        position: relative;
+        top: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 902px)
+{
+    main button:first-of-type {
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 720px)
+{
+    .entry-author {
+        font-size: 2rem;
+
+        position: relative;
+        right: -25%;
+
+        border: none;
+    }
+    .entry-date {
+        font-size: 2rem;
+
+        position: relative;
+        top: 4.5rem;
+    }
+    /* Chevron - Down arrow */
+    .down-arrow {
+        position: relative;
+        top: 72%;
+    }
 }
