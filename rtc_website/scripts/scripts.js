@@ -45,7 +45,7 @@ window.onload = function () {
 
     if (document.documentElement.clientWidth > 1124) {
         window.onscroll = function() {
-            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+            if (document.body.scrollTop > 48 || document.documentElement.scrollTop > 48) {
                 if (oppMenu.classList.contains('button-open') && myMenu.classList.contains('menu--visible')) {
                     oppMenu.classList.remove('button-open');
                     myMenu.classList.remove('menu--visible');
