@@ -60,7 +60,7 @@ main {
     font-weight: bold;
 
     position: absolute;
-    left: 49%;
+    left: 50%;
 
     margin: 2.4rem 0;
 
@@ -76,36 +76,17 @@ main {
     font-size: 5rem;
     font-weight: bold;
 
-    position: absolute;
-    left: 49%;
-
     margin: 2.4rem 0;
 
-    -moz-transition:  0.4s;
-    -webkit-transition:  0.4s;
-    transition:  0.4s;
+    -moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 
     -moz-transform: translateY(1.5rem);
     -ms-transform: translateY(1.5rem);
     -o-transform: translateY(1.5rem);
     -webkit-transform: translateY(1.5rem);
     transform: translateY(1.5rem);
-}
-
-.active:hover::after {
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-.active::after {
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
 }
 
 .blog-entry {
@@ -135,11 +116,44 @@ main {
 .last-entry {
     margin-bottom: 0;
 }
+/* Accordion activated */
+.active {
+    background: rgb(12, 86, 88);
+    z-index: 300;
+    /* transform: scale(1.1) translateY(-18vh); */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.accordion.active + .panel {
+    /* transform: scale(1.08) translateY(-12vh); */
+    z-index: 295;
+    position: absolute;
+    top: 9rem;
+    left: 0;
+
+    /* height: auto; */
+    min-height: 100%;
+}
+
+.active:hover::after {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.active::after {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 
 .entry-top {
-    /* margin: 1rem 0; */
-    /* position: relative;
-    top: 50%; */
     color: palegoldenrod;
     font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -147,7 +161,7 @@ main {
 .entry-ttl {
     float: left;
     position: relative;
-    top: -1.25rem;
+    top: -1.29rem;
 
     /* margin: 2rem 0 0 0; */
 }
@@ -199,14 +213,17 @@ main {
     color: white;
     font-size: 2.5rem;
 
-    /* transition: 0.5s; */
-
     overflow: hidden;
-    transition: max-height 0.4s ease-out,
-                padding 0.4s ease-out;
 
-    /* background: rgb(101, 141, 198); */
-    /* padding: auto; */
+    -moz-transition: 0.4s,
+                     max-height 0.4s ease-out,
+                     padding 0.4s ease-out;
+    -webkit-transition: 0.4s,
+                        max-height 0.4s ease-out,
+                        padding 0.4s ease-out;
+    transition: 0.4s,
+                max-height 0.4s ease-out,
+                padding 0.4s ease-out;
 }
 
 .panel h2 {
