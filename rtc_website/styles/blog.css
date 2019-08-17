@@ -116,25 +116,29 @@ main {
 .last-entry {
     margin-bottom: 0;
 }
+
 /* Accordion activated */
 .active {
     background: rgb(12, 86, 88);
     z-index: 300;
-    /* transform: scale(1.1) translateY(-18vh); */
     position: absolute;
     top: 0;
     left: 0;
+
+    width: 100%;
 }
 
 .accordion.active + .panel {
-    /* transform: scale(1.08) translateY(-12vh); */
     z-index: 295;
     position: absolute;
     top: 9rem;
     left: 0;
 
-    /* height: auto; */
+    height: auto;
     min-height: 100%;
+    width: 100%;
+
+    margin: 0;
 }
 
 .active:hover::after {
@@ -293,10 +297,5 @@ main {
 
         position: relative;
         top: 4.5rem;
-    }
-    /* Chevron - Down arrow */
-    .down-arrow {
-        position: relative;
-        top: 72%;
     }
 }

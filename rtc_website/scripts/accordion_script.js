@@ -1,5 +1,7 @@
 // Blog - Accordion
 var acc = document.getElementsByClassName("accordion");
+var logo = document.getElementById("logo");
+var toggle = document.getElementById("toggle");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -7,16 +9,14 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
+      logo.style.display = "none";
+      toggle.style.display = "none";
       panel.style.padding = null;
-      panel.style.boxShadow = null;
-      // -moz-box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
-      // box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);"
       
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "%";
+      logo.style.display = "block";
+      toggle.style.display = "block";
       panel.style.padding = "3rem";
-      panel.style.boxShadow = "0 0 3rem 0 rgba(0,0,0,0.85)";
     } 
   });
 }

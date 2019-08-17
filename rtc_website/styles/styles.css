@@ -1242,12 +1242,12 @@ blockquote span a:hover {
     #ttl
     { 
         position: relative;
-        top: 43%;
+        top: 40.5%;
     }
     /* Chevron - Down arrow */
     .down-arrow {
         position: relative;
-        top: 80vh;
+        top: 75vh;
     }
     /* HAM MENU */
     .toggle-button {
