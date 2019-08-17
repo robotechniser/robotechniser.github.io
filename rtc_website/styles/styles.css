@@ -65,7 +65,7 @@
 
     --connect-height: 85vh;
     --connect-club-ttl-font-size: 5rem;
-    --connect-logo-width: 12rem;
+    --connect-logo-width: 14rem;
     --connect-niser-logo-width: 20rem;
     --connect-desc-bg-col: rgba(41, 118, 148, 0.75);
     --club-details-font-size: 7rem;
@@ -902,6 +902,7 @@ blockquote span a:hover {
 
 .connect-niser {
     margin: 3vh 0;
+    margin-top: 1.5vh;
 
     color: rgb(27, 185, 125);
     font-size: 3rem;
@@ -935,6 +936,7 @@ blockquote span a:hover {
 {
     width: var(--connect-niser-logo-width);
     margin: 1rem 0;
+    margin-top: 2.5rem;
 }
 
 #gform-span {
@@ -1226,7 +1228,7 @@ blockquote span a:hover {
         --person-height: 32rem;
 
         --connect-height: 90vh;
-        --connect-logo-width: 8rem;
+        --connect-logo-width: 10rem;
         --connect-club-ttl-font-size: 4rem;
         --connect-niser-logo-width: 16rem;
         --club-details-font-size: 6rem;
