@@ -66,7 +66,7 @@
     --connect-height: 85vh;
     --connect-club-ttl-font-size: 5rem;
     --connect-logo-width: 12rem;
-    --connect-niser-logo-width: 16rem;
+    --connect-niser-logo-width: 20rem;
     --connect-desc-bg-col: rgba(41, 118, 148, 0.75);
     --club-details-font-size: 7rem;
     --gform-img-width: 7rem;
@@ -903,7 +903,7 @@ blockquote span a:hover {
 .connect-niser {
     margin: 3vh 0;
 
-    color: rgb(39, 59, 122);
+    color: rgb(27, 185, 125);
     font-size: 3rem;
     font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -1228,7 +1228,7 @@ blockquote span a:hover {
         --connect-height: 90vh;
         --connect-logo-width: 8rem;
         --connect-club-ttl-font-size: 4rem;
-        --connect-niser-logo-width: 14rem;
+        --connect-niser-logo-width: 16rem;
         --club-details-font-size: 6rem;
         --gform-span-font-size: 2.25rem;
         --gform-img-width: 5rem;
