@@ -3,9 +3,13 @@
     --accordion-bg-col: #444;
     --accordion-sep-col: rgb(212, 212, 158);
     --blog-entry-bg-col: rgba(138, 164, 165, 0.65);
-    --active-bg-col: rgb(14, 136, 95);
+    --active-bg-col: rgb(170, 67, 30);
+    /* rgb(14, 136, 95); */
     --blog-entry-top-col: palegoldenrod;
-    --blog-entry-panel-bg-col: rgb(8, 126, 139);
+    --blog-entry-panel-bg-col: rgb(50,50,50);
+    /* rgb(8, 126, 139) */
+    --blog-proj-img-width: 28rem;
+    --blog-proj-img-height: 30rem;
 }
 
 #blog {
@@ -170,7 +174,7 @@ main {
     width: 100%;
 
     margin: 0;
-    padding: 4rem;
+    padding: 6rem;
 }
 
 .active:hover::after {
@@ -254,9 +258,12 @@ main {
     margin-bottom: 6rem;
 
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+    font-family: Montserrat, sans-serif;
 
     overflow: auto;
+
+    text-align: justify;
 
     -moz-transition: 0.4s,
                      max-height 0.4s ease-out,
@@ -283,10 +290,39 @@ main {
 
 .entry-text {
     margin: 4rem 2rem;
-    font-family: "Zilla Slab", 'Trebuchet MS', sans-serif;
-    font-size: 2.25rem;
 
     text-align: justify;
+}
+
+.blog-proj-img {
+    display: block;
+    width: var(--blog-proj-img-width);
+    height: var(--blog-proj-img-height);
+
+    margin: 2rem auto;
+
+    -moz-transition: 0.35s;
+    -o-transition: 0.35s;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+}
+
+.blog-proj-img:hover {
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+    -webkit-box-shadow: 0 0 4rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 4rem 0 rgba(0,0,0,0.85);
+    box-shadow: 0 0 4rem 0 rgba(0,0,0,0.85);
+}
+
+.entry-text-header {
+    font-family: "Zilla Slab", sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
 }
 
 /* BLOG ONLY */
@@ -298,15 +334,6 @@ main {
     #blog {
         padding-bottom: 0.1px;
         min-height: 100vh;
-    }
-    .active {
-        background: rgb(14, 136, 95);
-        z-index: 40;
-        position: absolute;
-        top: 0;
-        left: 0;
-    
-        width: 100%;
     }
     .entry-author {
         position: relative;
@@ -327,15 +354,6 @@ main {
         padding-bottom: 0.1px;
         min-height: 100vh;
     }
-    .active {
-        background: rgb(14, 136, 95);
-        z-index: 40;
-        position: absolute;
-        top: 0;
-        left: 0;
-    
-        width: 100%;
-    }
     .entry-text {
         font-size: 2rem;
     }
@@ -344,7 +362,7 @@ main {
 
         position: relative;
         top: -0.5rem;
-        right: -23%;
+        right: -20%;
 
         border: none;
     }
@@ -377,7 +395,10 @@ main {
         min-height: 100vh;
     }
     .accordion.active + .panel {
-        padding: 2rem;
+        padding: 3.5rem;
+    }
+    .panel {
+        font-size: 2rem;
     }
     .entry-text {
         font-size: 1.9rem;
@@ -395,7 +416,7 @@ main {
         margin: 0;
 
         position: relative;
-        right: -29%;
+        right: -27%;
         top: 0.25rem;
     }
     .entry-date {
