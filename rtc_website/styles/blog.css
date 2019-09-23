@@ -2,7 +2,7 @@
 #blog {
     min-height: 100vh;
     height: auto;
-    padding: 4vw 3vw;
+    padding: 4rem 3rem;
     padding-top: 0;
     margin: 0;
     background: white url("../images/bg/tools.png") center repeat fixed;
@@ -27,7 +27,7 @@
 }
 
 main {
-    padding: 6vw 2vw 0 2vw;
+    padding: 6rem 2rem 0 2rem;
     height: auto;
 }
 
@@ -40,8 +40,10 @@ main {
     border: none;
     
     color: #444;
-    font-size: 15px;
 
+    -moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
 
     cursor: pointer;
@@ -60,28 +62,17 @@ main {
     font-weight: bold;
 
     position: absolute;
-    left: 50%;
-
-    margin: 2.4rem 0;
-
-    -moz-transition:  0.4s;
-    -webkit-transition:  0.4s;
-    transition:  0.4s;
-    transition: 0.4s;
-}
-
-.accordion:hover::after {
-    content: '\21E3';
-    color: rgb(212, 212, 158);
-    font-size: 5rem;
-    font-weight: bold;
+    left: 49%;
 
     margin: 2.4rem 0;
 
     -moz-transition: 0.4s;
     -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
+}
 
+.accordion:hover::after {
     -moz-transform: translateY(1.5rem);
     -ms-transform: translateY(1.5rem);
     -o-transform: translateY(1.5rem);
@@ -90,9 +81,6 @@ main {
 }
 
 .blog-entry {
-    /* margin: 5.5rem; */
-    /* padding: 3rem 5rem; */
-
     font-family: Montserrat, sans-serif;
     font-size: var(--about-desc-font-size);
     color: var(--about-desc-col);
@@ -103,8 +91,6 @@ main {
 
     -webkit-backdrop-filter: blur(0.25rem);
     backdrop-filter: blur(0.25rem);
-
-    /* border: 2px dotted red; */
 
     -webkit-box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
     -moz-box-shadow: 0 0 3rem 0 rgba(0,0,0,0.85);
@@ -121,11 +107,14 @@ main {
 .active {
     /* background: url(../images/bg/chalkboard.png); */
     background: rgb(14, 136, 95);
-    z-index: 300;
+    z-index: 40;
     position: absolute;
     top: 0;
     left: 0;
 
+    margin: 0;
+
+    /* height: 100%; */
     width: 100%;
 }
 
@@ -134,16 +123,17 @@ main {
 }
 
 .accordion.active + .panel {
-    z-index: 295;
+    z-index: 40;
     position: absolute;
-    top: 9rem;
+    top: 8.9rem;
     left: 0;
 
-    height: auto;
     min-height: 100%;
+    height: 100%;
     width: 100%;
 
     margin: 0;
+    padding: 4rem;
 }
 
 .active:hover::after {
@@ -171,8 +161,6 @@ main {
     float: left;
     position: relative;
     top: -1.29rem;
-
-    /* margin: 2rem 0 0 0; */
 }
 
 .entry-ttl:before {
@@ -188,6 +176,11 @@ main {
     margin-right: 2rem;
     
     text-shadow: 3px 3px 3px #333333;
+
+    -moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .entry-author {
@@ -207,24 +200,31 @@ main {
     top: 1.75rem;
 }
 
+.le720 {
+    display: none;
+}
+
 .icons {
     margin-right: 1rem;
 }
 
 /* Actual blog text */
 .panel {
+    margin: 0;
+
     background-color: rgb(8, 126, 139);
-
     max-height: 0;
-
     margin-bottom: 6rem;
 
     color: white;
     font-size: 2.5rem;
 
-    overflow: hidden;
+    overflow: auto;
 
     -moz-transition: 0.4s,
+                     max-height 0.4s ease-out,
+                     padding 0.4s ease-out;
+    -o-transition: 0.4s,
                      max-height 0.4s ease-out,
                      padding 0.4s ease-out;
     -webkit-transition: 0.4s,
@@ -235,12 +235,17 @@ main {
                 padding 0.4s ease-out;
 }
 
-.panel h2 {
+.panel div {
+    text-align: center;
+}
+
+.inline-entry-ttl {
     font-family: Arvo;
     font-weight: 600;
 }
 
-.panel p {
+.entry-text {
+    /* height: 100%; */
     margin: 4rem 2rem;
     font-family: "Zilla Slab";
     font-size: 2.25rem;
@@ -251,56 +256,207 @@ main {
 /* BLOG ONLY */
 @media screen and (min-width: 960px) and (max-width: 1124px)
 {
-    main button:first-of-type {
-        margin-top: 10rem;
+    main {
+        padding-top: 15rem;
+    }
+    #blog {
+        padding-bottom: 0.1px;
+        min-height: 100vh;
+    }
+    .active {
+        /* background: url(../images/bg/chalkboard.png); */
+        background: rgb(14, 136, 95);
+        z-index: 40;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        width: 100%;
+    }
+    .entry-author {
+        position: relative;
+        top: 1rem;
+    }
+    .entry-date {
+        position: relative;
+        top: 2rem;
     }
 }
 
 @media screen and (max-width: 960px)
 {
-    main button:first-of-type {
-        margin-top: 10rem;
+    main {
+        padding-top: 15rem;
     }
-    .accordion::after {
-        font-size: 3rem;
-    
+    #blog {
+        padding-bottom: 0.1px;
+        min-height: 100vh;
+    }
+    .active {
+        /* background: url(../images/bg/chalkboard.png); */
+        background: rgb(14, 136, 95);
+        z-index: 40;
         position: absolute;
-        left: 49%;
+        top: 0;
+        left: 0;
+    
+        width: 100%;
+    }
+    .entry-text {
+        font-size: 2rem;
     }
     .entry-author {
+        font-size: 1.9rem;
+
         position: relative;
-        top: -1rem;
-        right: -25%;
+        top: -0.5rem;
+        right: -23%;
 
         border: none;
     }
     .entry-date {
+        font-size: 1.9rem;
+
         position: relative;
-        top: 3.5rem;
+        top: 3.75rem;
     }
 }
 
 @media screen and (max-width: 902px)
 {
-    main button:first-of-type {
-        margin-top: 10rem;
+    main {
+        padding-top: 15rem;
+    }
+    #blog {
+        padding-bottom: 0.1px;
+        min-height: 100vh;
     }
 }
 
 @media screen and (max-width: 720px)
 {
+    main {
+        padding-top: 15rem;
+    }
+    #blog {
+        padding-bottom: 0px;
+        min-height: 100vh;
+    }
+    .accordion.active + .panel {
+        padding: 2rem;
+    }
+    .entry-text {
+        font-size: 1.9rem;
+    }
+    .accordion::after {
+        font-size: 4.5rem;
+    
+        position: absolute;
+        left: 49%;
+    }
     .entry-author {
-        font-size: 2rem;
+        font-size: 1.9rem;
+
+        padding: 0;
+        margin: 0;
 
         position: relative;
-        right: -25%;
-
-        border: none;
+        right: -29%;
+        top: 0.25rem;
     }
     .entry-date {
-        font-size: 2rem;
+        font-size: 1.9rem;
+
+        padding: 0;
+        margin: 0;
 
         position: relative;
-        top: 4.5rem;
+        top: 4rem;
+    }
+}
+
+@media screen and (max-width: 660px)
+{
+    main {
+        padding-top: 15rem;
+    }
+    #blog {
+        padding-bottom: 0.1px;
+        min-height: 100vh;
+    }
+    .accordion::after {
+        font-size: 4rem;
+    
+        margin: 2rem 0;
+        position: absolute;
+        top: 3.5rem;
+    }
+    .accordion:hover::after {
+        font-size: 4.2rem;
+    
+        -moz-transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    
+        -moz-transform: translateY(1.25rem);
+        -ms-transform: translateY(1.25rem);
+        -o-transform: translateY(1.25rem);
+        -webkit-transform: translateY(1.25rem);
+        transform: translateY(1.25rem);
+    }
+    .active:hover::after {
+        -moz-transition: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    
+    .active::after {
+        position: absolute;
+        top: -0.5rem;
+        right: 4rem;
+
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .inline-entry-ttl {
+        margin-top: 4rem;
+    }
+    .entry-author, .entry-date {
+        display: none;
+    }
+    .le720 {
+        display: block;
+        font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .entry-text {
+        margin: 0;
+        margin-top: 5.5rem;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 420px), (max-height: 420px)
+{
+    main {
+        padding: 0;
+        padding-top: 10rem;
+    }
+    #blog {
+        padding-bottom: 0.1px;
+        min-height: 100vh;
+    }
+    footer { /* Removed, as it lips on phones (Portrait) */
+        display: none;
     }
 }

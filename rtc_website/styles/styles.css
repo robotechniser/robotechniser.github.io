@@ -192,7 +192,7 @@ ul {
 
 .toggle-button .menu-bar-middle {
     height: 4px;
-    background-color: rgb(39, 246, 229);
+    background-color: rgb(13, 201, 185);
     margin-top: 7px;
     margin-bottom: 7px;
     top: 4px;
@@ -677,7 +677,7 @@ blockquote span a:hover {
     display: grid;
 
     grid-template-columns: repeat(2, 6fr);
-    grid-column-gap: 2rem;
+    grid-column-gap: 1.6rem;
 
     /* background: white url(https://source.unsplash.com/random/?robots) center/cover no-repeat fixed; */
     background: white url(../images/bg/alchemy.png) repeat fixed;
@@ -698,9 +698,9 @@ blockquote span a:hover {
     -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
 
-    -webkit-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-    -moz-box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
-    box-shadow: 0 0 6rem 0 rgba(0,0,0,0.85);
+    -webkit-box-shadow: 0 0 4rem 0 rgba(0,0,0,0.85);
+    -moz-box-shadow: 0 0 4rem 0 rgba(0,0,0,0.85);
+    box-shadow: 0 0 4rem 0 rgba(0,0,0,0.85);
 
     text-align: center;
 }
@@ -1128,7 +1128,8 @@ blockquote span a:hover {
         margin: 4rem;
     }
     .project {
-        margin: 0.3vw;
+        margin: 0.75rem 0.3vw;
+        padding: 1.5rem;
     }
     /* Team */
     #team {
@@ -1348,7 +1349,8 @@ blockquote span a:hover {
     }
     /* Projects */
     .project {
-        margin: 1rem;
+        margin: 1.25rem;
+        padding: 1rem;
         max-width: 94vw;
     }
     .proj-img-container-lower {
@@ -1410,7 +1412,7 @@ blockquote span a:hover {
     }
 }
 
-/* For phones (tall) */
+/* For phones (portrait) */
 @media screen and (max-height: 880px)
 {
     .menu-links
@@ -1437,3 +1439,18 @@ blockquote span a:hover {
         right: 2.5rem;
     } */
 }
+/* For phones (landscape) */
+@media screen and (max-height: 415px)
+{
+    .menu-list {
+        line-height: 6rem;
+    }
+    .menu-links
+    {
+        padding: 1.5rem;
+        margin: 1rem 0;
+        position: relative;
+        top: 4.5vh;
+    }
+}
+
