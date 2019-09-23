@@ -1,4 +1,13 @@
 /* BLOG-RELATED STUFF */
+* {
+    --accordion-bg-col: #444;
+    --accordion-sep-col: rgb(212, 212, 158);
+    --blog-entry-bg-col: rgba(138, 164, 165, 0.65);
+    --active-bg-col: rgb(14, 136, 95);
+    --blog-entry-top-col: palegoldenrod;
+    --blog-entry-panel-bg-col: rgb(8, 126, 139);
+}
+
 #blog {
     min-height: 100vh;
     height: auto;
@@ -14,7 +23,7 @@
     float: left;
 
     position: relative;
-    left: 28.7%;
+    left: 29.35%;
 
     font-family: 'Courier New', Courier, monospace;
     font-size: var(--nav-link-font-size);
@@ -24,6 +33,35 @@
     margin: 2.5vh var(--nav-link-margin);
 
     text-align: center;
+}
+
+.blog-links:hover {
+    opacity: 0.8;
+}
+
+.blog-links::after {
+    content: "";
+    display: block;
+    height: 0.3rem;
+
+    position: absolute;
+    top: 100%;
+    width: 102%;
+    left: 50%;
+
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+
+    background-image: linear-gradient(to right, transparent 50.3%, #FFFA3B 50.3%);
+    transition: background-position .2s .1s ease-out;
+    background-size: 200% auto;
+}
+
+.blog-links:hover:after {
+    background-position: -100% 0;
 }
 
 main {
@@ -39,7 +77,7 @@ main {
 
     border: none;
     
-    color: #444;
+    color: var(--accordion-bg-col);
 
     -moz-transition: 0.4s;
     -webkit-transition: 0.4s;
@@ -57,7 +95,7 @@ main {
 
 .accordion::after {
     content: '\21E3';
-    color: rgb(212, 212, 158);
+    color: var(--accordion-sep-col);
     font-size: 5rem;
     font-weight: bold;
 
@@ -87,7 +125,7 @@ main {
 
     text-align: justify;
 
-    background: rgba(138, 164, 165, 0.65);
+    background: var(--blog-entry-bg-col);
 
     -webkit-backdrop-filter: blur(0.25rem);
     backdrop-filter: blur(0.25rem);
@@ -106,7 +144,7 @@ main {
 /* Accordion activated */
 .active {
     /* background: url(../images/bg/chalkboard.png); */
-    background: rgb(14, 136, 95);
+    background: var(--active-bg-col);
     z-index: 40;
     position: absolute;
     top: 0;
@@ -114,7 +152,6 @@ main {
 
     margin: 0;
 
-    /* height: 100%; */
     width: 100%;
 }
 
@@ -153,7 +190,7 @@ main {
 }
 
 .entry-top {
-    color: palegoldenrod;
+    color: var(--blog-entry-top-col);
     font-family: Inconsolata, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -164,7 +201,7 @@ main {
 }
 
 .entry-ttl:before {
-    font-family: Arial;
+    font-family: Arial, 'Trebuchet MS', sans-serif;
     content: "\0023";
 
     color: #78C0A8;
@@ -212,7 +249,7 @@ main {
 .panel {
     margin: 0;
 
-    background-color: rgb(8, 126, 139);
+    background-color: var(--blog-entry-panel-bg-col);
     max-height: 0;
     margin-bottom: 6rem;
 
@@ -240,14 +277,13 @@ main {
 }
 
 .inline-entry-ttl {
-    font-family: Arvo;
+    font-family: Arvo, 'Trebuchet MS', sans-serif;
     font-weight: 600;
 }
 
 .entry-text {
-    /* height: 100%; */
     margin: 4rem 2rem;
-    font-family: "Zilla Slab";
+    font-family: "Zilla Slab", 'Trebuchet MS', sans-serif;
     font-size: 2.25rem;
 
     text-align: justify;
@@ -264,7 +300,6 @@ main {
         min-height: 100vh;
     }
     .active {
-        /* background: url(../images/bg/chalkboard.png); */
         background: rgb(14, 136, 95);
         z-index: 40;
         position: absolute;
@@ -293,7 +328,6 @@ main {
         min-height: 100vh;
     }
     .active {
-        /* background: url(../images/bg/chalkboard.png); */
         background: rgb(14, 136, 95);
         z-index: 40;
         position: absolute;
@@ -456,7 +490,7 @@ main {
         padding-bottom: 0.1px;
         min-height: 100vh;
     }
-    footer { /* Removed, as it lips on phones (Portrait) */
+    footer { /* Removed, as it clips on phones (Portrait) */
         display: none;
     }
 }
