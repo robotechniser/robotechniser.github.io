@@ -12,6 +12,10 @@
     --blog-proj-img-height: 30rem;
 }
 
+body {
+    background: rgb(43, 41, 55); /* Fallback color */
+}
+
 #blog {
     min-height: 100vh;
     height: auto;
