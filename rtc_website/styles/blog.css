@@ -3,7 +3,7 @@
     --accordion-bg-col: #444;
     --accordion-sep-col: rgb(212, 212, 158);
     --blog-entry-bg-col: rgba(138, 164, 165, 0.65);
-    --active-bg-col: rgb(170, 67, 30);
+    --active-bg-col: rgb(121, 47, 20);
     /* rgb(14, 136, 95); */
     --blog-entry-top-col: palegoldenrod;
     --blog-entry-panel-bg-col: rgb(50,50,50);
@@ -25,20 +25,33 @@ body {
     background: white url("../images/bg/tools.png") center repeat fixed;
 }
 
+#nav
+{
+    padding: 1rem;
+
+    background: inherit;
+
+    z-index: 5;
+}
+
+#nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .blog-links
 {
-    display: block;
-    float: left;
 
-    position: relative;
-    left: 29.35%;
+    display: block;
 
     font-family: 'Courier New', Courier, monospace;
     font-size: var(--nav-link-font-size);
     font-weight: 600;
     color: var(--nav-link-col);
 
-    margin: 2.5vh var(--nav-link-margin);
+    margin: 2rem 2vw;
 
     text-align: center;
 }
@@ -236,7 +249,7 @@ main {
 
     padding-right: 2rem;
     padding: 1rem;
-    border-right: 4px solid rgba(252, 185, 109, 0.75);
+    border-right: 4px solid rgba(92, 55, 13, 0.979);
 }
 
 .entry-date {
