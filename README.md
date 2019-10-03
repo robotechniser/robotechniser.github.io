@@ -8,3 +8,8 @@
 ## Issues:
 
 1. iPadOS Safari messes up all transition/animation timings. Curiously, they work perfectly in split-view.
+
+## Planned Updates:
+
+1. Events Section/Page
+2. Gallery
