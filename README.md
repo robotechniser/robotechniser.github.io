@@ -1,5 +1,7 @@
 # Repository for RoboTech Club's Website
 
+## Currently hosted at: https://www.niser.ac.in/~smishra/smlab/rtc/
+
 ## Assets Required:
 
 1. Full blogs for Projects
