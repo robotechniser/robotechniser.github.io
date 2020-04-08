@@ -1,6 +1,6 @@
 # Repository for RoboTech Club's Website
 
-## Currently hosted at: https://robotechniser.github.io
+## Currently hosted at: [https://robotechniser.github.io](https://robotechniser.github.io)
 
 ## Assets Required:
 
