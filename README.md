@@ -1,6 +1,6 @@
 # Repository for RoboTech Club's Website
 
-## Currently hosted at: https://www.niser.ac.in/~smishra/smlab/rtc/
+## Currently hosted at: https://robotechniser.github.io
 
 ## Assets Required:
 
